@@ -770,17 +770,15 @@
         navLinks.forEach(link => {
             link.addEventListener("click", function(event) {
                 event.preventDefault(); // Empêcher le saut par défaut
-                const sectionID = this.getAttribute("href");
+                const sectionID = this.getAttribute("href").replace("#", "");
                 
-                if (sectionID.startsWith("#")) {
-                    const targetSection = document.querySelector(sectionID);
-                    if (targetSection) {
-                        // Faire défiler jusqu'à la section
-                        targetSection.scrollIntoView({ behavior: "smooth" });
+                const targetSection = document.getElementById(sectionID);
+                if (targetSection) {
+                    // Faire défiler jusqu'à la section
+                    targetSection.scrollIntoView({ behavior: "smooth" });
 
-                        // Mettre à jour l'URL sans recharger la page
-                        history.pushState(null, "", sectionID);
-                    }
+                    // Mettre à jour l'URL sans afficher le #
+                    history.pushState(null, "", "/" + sectionID);
                 }
             });
         });
@@ -794,13 +792,15 @@
                 if (section.offsetTop <= scrollPosition && (section.offsetTop + section.offsetHeight) > scrollPosition) {
                     let sectionID = section.getAttribute("id");
                     if (sectionID) {
-                        history.replaceState(null, "", "#" + sectionID);
+                        history.replaceState(null, "", "/" + sectionID);
                     }
                 }
             });
         });
     });
 </script>
+
+
 
 
     </body>
