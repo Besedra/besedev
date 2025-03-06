@@ -80,7 +80,7 @@
     }
 
     .display-6 {
-        font-size: 24px !important; /* Réduit le titre */
+        font-size: 20px !important; /* Réduit le titre */
     }
 
     .btn {
@@ -231,7 +231,7 @@
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
 } 
 
-#home {
+#accueil {
     
     background: url(../img/header.svg) no-repeat;
     background-size: cover;
@@ -341,12 +341,12 @@
 
 
 /*** About ***/
-#about .years .display-1 {
+#apropos .years .display-1 {
     font-size: 10rem;
     line-height: 9rem;
 }
 
-#about .years h5 {
+#apropos .years h5 {
     letter-spacing: 30px;
     margin-right: -30px;
 }
@@ -375,26 +375,26 @@
         transform: scale(1.05); /* Agrandir légèrement (5%) */
     }
     
-#skill .progress {
+#competence .progress {
     height: 5px;
     border-radius: 5px;
 }
 
-#skill .progress .progress-bar {
+#competence .progress .progress-bar {
     width: 0px;
     border-radius: 5px;
     transition: 3s;
 }
 
-#skill .nav-pills .nav-link {
+#competence .nav-pills .nav-link {
     color: var(--dark);
 }
 
-#skill .nav-pills .nav-link.active {
+#competence .nav-pills .nav-link.active {
     color: #FFFFFF;
 }
 
-#skill .tab-content hr {
+#competence .tab-content hr {
     width: 30px;
 }
 .nav-pills .nav-item {
@@ -702,7 +702,7 @@
     opacity: 1;
 }
 
-#home {
+#accueil {
     min-height: 90vh; /* Agrandir le header */
     display: flex;
     align-items: center;
