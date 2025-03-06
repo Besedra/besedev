@@ -783,6 +783,36 @@
     });
 </script>
 
+<!-- manala bug div sur le section projet -->
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        let $grid = document.querySelector('.portfolio-container');
+
+        if (window.Isotope) {
+            let iso = new Isotope($grid, {
+                itemSelector: '.portfolio-item',
+                layoutMode: 'fitRows'
+            });
+
+            // Active le filtre par défaut (Tous) au chargement
+            let defaultFilter = "*";
+            iso.arrange({ filter: defaultFilter });
+
+            document.querySelectorAll("#portfolio-flters li").forEach(function (filter) {
+                filter.addEventListener("click", function () {
+                    let filterValue = this.getAttribute("data-filter");
+                    iso.arrange({ filter: filterValue });
+
+                    // Met à jour l'état actif
+                    document.querySelector("#portfolio-flters .active").classList.remove("active");
+                    this.classList.add("active");
+                });
+            });
+        }
+    });
+</script>
+
+
 
 
 
