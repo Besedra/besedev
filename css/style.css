@@ -875,3 +875,19 @@
     text-underline-offset: 10px;
 
 }
+
+/*anim chargement*/
+.animate-logo {
+        animation: fadeInOut 2s infinite alternate ease-in-out;
+    }
+
+    @keyframes fadeInOut {
+        0% {
+            opacity: 0.3;
+            transform: scale(0.8);
+        }
+        100% {
+            opacity: 1;
+            transform: scale(1);
+        }
+    }
