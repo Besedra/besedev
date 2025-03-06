@@ -515,7 +515,7 @@
                         <p class="mb-4">Vous avez un projet en tête ou une opportunité à me proposer ?<br>
                         Je serais ravi d’échanger avec vous ! N’hésitez pas à me contacter pour discuter de vos besoins et voir comment nous pouvons collaborer. Envoyez-moi un message dès maintenant !</a></p>
 
-<form action="sendmail" method="post" id="contactForm" autocomplete="off">
+<form action="https://formspree.io/f/xvgkpzqo" method="post" id="contactForm" autocomplete="off">
     <div class="row g-3">
         <div class="col-md-6">
             <div class="form-floating">
@@ -533,43 +533,27 @@
         
         <div class="col-12">
             <div class="form-floating">
-                <input class="form-control" id="inputPhone" type="text" name="phone" placeholder="Sujet" required>
+                <input class="form-control" id="inputSubject" type="text" name="subject" placeholder="Objet" required>
                 <label for="inputSubject">Objet</label>
             </div>
         </div>
         
         <div class="col-12">
             <div class="form-floating">
-                <textarea class="form-control" placeholder="Votre message" id="inputMessage" name="message" placeholder="Message" style="height: 100px" required></textarea>
+                <textarea class="form-control" placeholder="Votre message" id="inputMessage" name="message" style="height: 100px" required></textarea>
                 <label for="inputMessage">Message</label>
             </div>
-        </div>
-
-        <div class="card-body p-2">
-            <div class="alert d-none" id="alertMessage"></div>
         </div>
 
         <div class="col-12">
             <button class="btn btn-primary py-3 px-5" id="btn" type="submit"><i class="fa fa-paper-plane"></i> Envoyer</button>
         </div>
     </div>
-
-    <!-- Pop-up Modal -->
-<div class="modal fade" id="messageModal" tabindex="-1" aria-labelledby="messageModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="messageModalLabel">Message</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body" id="modalMessage"></div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Fermer</button>
-      </div>
-    </div>
-  </div>
-</div>
 </form>
+
+<div id="confirmationMessage" class="alert alert-success text-center p-3 d-none" style="position: fixed; top: 20px; right: 0px; width: 300px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); border-radius: 8px; background-color: #007F5F; color: white; font-weight: bold;">
+    <i class="fa fa-check-circle"></i> Votre message a été envoyé avec succès !
+</div>
 
                     </div>
                 </div>
@@ -690,51 +674,46 @@
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
 
-    <!-- animation code icon -->
-<script>
 
-
-</script>
-
+<!-- anim msg de confirmation  -->
 <script>
     document.addEventListener("DOMContentLoaded", function() {
-        const contactForm = document.querySelector('#contactForm');
-        const btn = document.querySelector('#btn');
-        const modal = new bootstrap.Modal(document.getElementById('messageModal'));
-        const modalMessage = document.getElementById('modalMessage');
+        const contactForm = document.querySelector("#contactForm");
+        const btn = document.querySelector("#btn");
+        const confirmationMessage = document.querySelector("#confirmationMessage");
 
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            btn.innerHTML = '<i class="fa fa-spinner fa-spin"></i> Envoi en cours...';
+        contactForm.addEventListener("submit", function(e) {
+            e.preventDefault(); // Empêcher le rechargement de la page
+            btn.innerHTML = '<i class="fa fa-spinner fa-spin"></i> Envoi...';
             btn.disabled = true;
 
             const formData = new FormData(this);
 
-            fetch('sendmail.php', {
-                method: 'POST',
-                body: formData
-            })
-            .then(response => response.text())
-            .then(text => {
-                if (text.trim() === 'success') {
-                    modalMessage.innerHTML = '<div class="text-success"><i class="fa fa-check-circle"></i> Votre message a été envoyé avec succès. Merci!</div>';
+            fetch(this.action, {
+                method: this.method,
+                body: formData,
+                headers: { 'Accept': 'application/json' }
+            }).then(response => response.json())
+            .then(data => {
+                if (data.ok) {
+                    confirmationMessage.classList.remove("d-none");
+                    setTimeout(() => {
+                        confirmationMessage.classList.add("d-none");
+                    }, 9000);
+                    contactForm.reset();
                 } else {
-                    modalMessage.innerHTML = '<div class="text-danger"><i class="fa fa-exclamation-circle"></i> Erreur lors de l\'envoi. Veuillez réessayer.</div>';
+                    alert("Erreur lors de l'envoi du message. Veuillez réessayer.");
                 }
-                modal.show();
-            })
-            .catch(error => {
-                modalMessage.innerHTML = '<div class="text-danger"><i class="fa fa-times-circle"></i> Une erreur s\'est produite. Veuillez réessayer plus tard.</div>';
-                modal.show();
-            })
-            .finally(() => {
+            }).catch(error => {
+                alert("Erreur de connexion. Veuillez vérifier votre connexion internet.");
+            }).finally(() => {
                 btn.innerHTML = '<i class="fa fa-paper-plane"></i> Envoyer';
                 btn.disabled = false;
-                contactForm.reset();
             });
         });
     });
 </script>
+
 
 <!-- url link dinamyque -->
 <script>
@@ -811,5 +790,11 @@
         }
     });
 </script>
-</body>
+
+
+
+
+
+
+    </body>
 </html>
