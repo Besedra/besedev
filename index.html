@@ -69,9 +69,14 @@
                         <h2 class="typed-text-output d-inline"></h2>
                         <div class="typed-text d-none">Développeur web, Développeur front-end</div>
                         <div class="d-flex align-items-center pt-5">
-                            <a href="assets/CV_Sedra_DevWeb_2025.pdf" class="btn btn-primary py-3 px-4 me-5" download><i class="fas text-white fa-download"></i> Télécharger mon CV</a>
-                        <!--     <a href="" class="btn btn-light py-3 px-4 me-5"><i class="fa fa-comment-dots"></i> Discutons</a> -->
-                        </div>
+                    <a href="assets/CV_Sedra_DevWeb_2025.pdf" class="btn btn-primary py-3 px-4 me-5" download>
+                        <span class="download-icon">
+                            <i class="fas fa-download"></i>
+                        </span>
+                        <span>Télécharger mon CV</span>
+                        <div class="download-effect"></div>
+                    </a>
+        </div>
                     </div>
 
                     <div class="col-lg-6 text-center wow fadeInRight" data-wow-delay="0.5s" style="position: relative;">
@@ -551,7 +556,7 @@
     </div>
 </form>
 
-<div id="confirmationMessage" class="alert alert-success text-center p-3 d-none" style="position: fixed; top: 20px; right: 0px; width: 300px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); border-radius: 8px; background-color: #007F5F; color: white; font-weight: bold;">
+<div id="confirmationMessage" class="alert alert-success text-center p-3 d-none" style="position: fixed; top: 25%; left: 50%; transform: translate(-50%, -50%); width: 300px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); border-radius: 8px; background-color: #007F5F; color: white; font-weight: bold; opacity: 1; transition: opacity 1s ease-in-out;">
     <i class="fa fa-check-circle"></i> Votre message a été envoyé avec succès !
 </div>
 
@@ -587,6 +592,7 @@
                             <li class="scaleanim"><a href="#apropos"><i class="text-primary fa fa-info-circle"></i> À propos</a></li>
                             <li class="scaleanim"><a href="#services"><i class="text-primary fa fa-cogs"></i> Services</a></li>
                             <li class="scaleanim"><a href="#contact"><i class="text-primary fa fa-envelope"></i> Contact</a></li>
+
 
                         </ul>
                     </div>
@@ -698,8 +704,12 @@
                 if (data.ok) {
                     confirmationMessage.classList.remove("d-none");
                     setTimeout(() => {
-                        confirmationMessage.classList.add("d-none");
-                    }, 9000);
+                        confirmationMessage.style.opacity = "0";
+                        setTimeout(() => {
+                            confirmationMessage.classList.add("d-none");
+                            confirmationMessage.style.opacity = "1";
+                        }, 1000);
+                    }, 3000);
                     contactForm.reset();
                 } else {
                     alert("Erreur lors de l'envoi du message. Veuillez réessayer.");
@@ -711,83 +721,6 @@
                 btn.disabled = false;
             });
         });
-    });
-</script>
-
-
-<!-- url link dinamyque -->
-<script>
-    document.addEventListener("DOMContentLoaded", function() {
-        const navLinks = document.querySelectorAll(".navbar-nav a");
-
-        navLinks.forEach(link => {
-            link.addEventListener("click", function(event) {
-                event.preventDefault(); // Empêcher le saut par défaut
-                const sectionID = this.getAttribute("href").replace("#", "");
-                
-                const targetSection = document.getElementById(sectionID);
-                if (targetSection) {
-                    // Faire défiler jusqu'à la section
-                    targetSection.scrollIntoView({ behavior: "smooth" });
-
-                    // Mettre à jour l'URL sans afficher le #
-                    history.pushState(null, "", "/" + sectionID);
-                }
-            });
-        });
-
-        // Mettre à jour l'URL en fonction du défilement
-        window.addEventListener("scroll", function() {
-            let sections = document.querySelectorAll("section, div[id]");
-            let scrollPosition = window.scrollY + 100;
-
-            sections.forEach(section => {
-                if (section.offsetTop <= scrollPosition && (section.offsetTop + section.offsetHeight) > scrollPosition) {
-                    let sectionID = section.getAttribute("id");
-                    if (sectionID) {
-                        history.replaceState(null, "", "/" + sectionID);
-                    }
-                }
-            });
-        });
-    });
-</script>
-
-<!-- chargement anim -->
-<script>
-    document.addEventListener("DOMContentLoaded", function() {
-        setTimeout(() => {
-            document.getElementById("spinner").classList.remove("show");
-        }, 2000); // Cache le loader après 2 secondes
-    });
-</script>
-
-<!-- manala bug div sur le section projet -->
-<script>
-    document.addEventListener("DOMContentLoaded", function() {
-        let $grid = document.querySelector('.portfolio-container');
-
-        if (window.Isotope) {
-            let iso = new Isotope($grid, {
-                itemSelector: '.portfolio-item',
-                layoutMode: 'fitRows'
-            });
-
-            // Active le filtre par défaut (Tous) au chargement
-            let defaultFilter = "*";
-            iso.arrange({ filter: defaultFilter });
-
-            document.querySelectorAll("#portfolio-flters li").forEach(function (filter) {
-                filter.addEventListener("click", function () {
-                    let filterValue = this.getAttribute("data-filter");
-                    iso.arrange({ filter: filterValue });
-
-                    // Met à jour l'état actif
-                    document.querySelector("#portfolio-flters .active").classList.remove("active");
-                    this.classList.add("active");
-                });
-            });
-        }
     });
 </script>
 
