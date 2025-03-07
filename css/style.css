@@ -923,7 +923,7 @@
     0% { transform: translateX(0); }
     100% { transform: translateX(10px); }
 }
-.bi-arrow-right-circle {
+.arrow {
     animation: arrowMove 1.5s infinite ease-in-out;
 }
 
