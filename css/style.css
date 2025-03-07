@@ -66,6 +66,13 @@
     .footer .social-icons {
         margin-top: 10px;
     }
+        .portfolio-overlay h3 {
+        font-size: 12px
+    }
+
+    .portfolio-overlay p {
+        font-size: 9px
+    }
 }
 
 /* code responsive */
@@ -93,11 +100,11 @@
     }
 
     .portfolio-overlay h3 {
-        font-size: 13px
+        font-size: 12px
     }
 
     .portfolio-overlay p {
-        font-size: 10px
+        font-size: 9px
     }
 
 }
