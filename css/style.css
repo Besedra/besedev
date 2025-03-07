@@ -908,8 +908,6 @@
         }
     }
 
-
-
 /* Animation en boucle pour l'icône de téléchargement */
 @keyframes bounceEffect {
     0%, 100% { transform: translateY(0); }
@@ -920,44 +918,24 @@
     animation: bounceEffect 0.5s infinite ease-in-out;
 }
 
-/* Animation en boucle pour les icônes des boutons d'action */
-@keyframes pulseEffect {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.5); }
-    100% { transform: scale(1); }
-}
-/*.btn i {
-    animation: pulseEffect 1s infinite ease-in-out;
-}*/
-
-    @keyframes arrowMove {
-  0%   { transform: translateX(0); }
-  30%  { transform: translateX(-10px); }
-  50%  { transform: translateX(0); }
-  70%  { transform: translateX(-5px); }
-  100% { transform: translateX(0); }
-}
+/*ANIM FLECHE*/
+@keyframes arrowMove {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(10px); }
 }
 .bi-arrow-right-circle {
     animation: arrowMove 1.5s infinite ease-in-out;
 }
 
 /* Animation spécifique pour l'icône fa-paper-plane façon fusée */
-
 @keyframes rocketFly {
   0%   { transform: translate(0, 0) rotate (0deg); }
   100% { transform: translate(0px, -10px) rotate(0deg); }
-.rocket {
+}
+
+.fa-paper-plane {
     animation: rocketFly 1.5s infinite ease-in-out;
 }
 
-.fleche {
-    animation: flecheanim 0.5s infinite ease-in-out;
-}
-@keyframes flecheanim {
-     0%   { transform: translateX(0); }
-  30%  { transform: translateX(-10px); }
-  50%  { transform: translateX(0); }
-  70%  { transform: translateX(-5px); }
-  100% { transform: translateX(0); }
-}
+
+
