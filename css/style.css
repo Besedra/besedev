@@ -940,3 +940,41 @@
 
 
 
+/* Complétez votre CSS avec ces règles */
+.portfolio-container {
+    position: relative;
+    width: 100%;
+    min-height: 500px; /* Hauteur minimale pour éviter les sauts */
+}
+
+.portfolio-item {
+    transition: all 0.3s ease-in-out;
+    height: auto;
+}
+
+/* Forcer une hauteur fixe pour les images pour éviter les réorganisations */
+.portfolio-img img {
+    width: 100%;
+    height: 250px; /* Ajustez selon vos besoins */
+    object-fit: cover;
+}
+
+/* Améliorer la stabilité pendant le chargement */
+.portfolio-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.portfolio-img:hover .portfolio-overlay {
+    opacity: 1;
+}
