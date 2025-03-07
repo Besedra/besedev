@@ -718,9 +718,28 @@
 </script>
 
 
-
-
-
-
+<script>
+    // Ajoutez ce script à votre page pour garantir que le filtre s'initialise correctement après le chargement complet
+$(document).ready(function() {
+    // Petit délai pour s'assurer que toutes les images sont chargées
+    setTimeout(function() {
+        // Réinitialisation du conteneur de portfolio
+        $('.portfolio-container').isotope({
+            itemSelector: '.portfolio-item',
+            layoutMode: 'fitRows'
+        });
+        
+        // Gestion des filtres
+        $('#portfolio-flters li').on('click', function() {
+            $('#portfolio-flters li').removeClass('active');
+            $(this).addClass('active');
+            
+            $('.portfolio-container').isotope({
+                filter: $(this).data('filter')
+            });
+        });
+    }, 300);
+});
+</script>
     </body>
 </html>
