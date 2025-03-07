@@ -935,6 +935,7 @@
 
 .fa-paper-plane {
     animation: rocketFly 1.5s infinite ease-in-out;
+    transform: rotate(45deg);
 }
 
 
