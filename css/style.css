@@ -91,6 +91,15 @@
     .tab-content .col-sm-6 {
         width: 100%; /* Une seule colonne sur mobile */
     }
+
+    .portfolio-overlay h3 {
+        font-size: 13px
+    }
+
+    .portfolio-overlay p {
+        font-size: 10px
+    }
+
 }
 
 
