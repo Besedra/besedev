@@ -930,7 +930,7 @@
 /* Animation spécifique pour l'icône fa-paper-plane façon fusée */
 @keyframes rocketFly {
   0%   { transform: translate(0, 0) rotate (0deg); }
-  100% { transform: translate(0px, -10px) rotate(0deg); }
+  100% { transform: translate(0px, -5px) rotate(0deg); }
 }
 
 .fa-paper-plane {
