@@ -149,7 +149,7 @@
 /* by besedra */
 .g-5 {
     /* padding-top: 3rem; */
-    padding-bottom: 3rem;
+    padding-bottom: 2rem;
 }
 
 
@@ -913,31 +913,29 @@
     0%, 100% { transform: translateY(0); }
     50% { transform: translateY(-5px); }
 }
-.download-icon {
+.download-icon, .fa-handshake, .fa-arrow-circle-right, .fa-envelope{
     display: inline-block;
     animation: bounceEffect 0.5s infinite ease-in-out;
-}
-
-/*ANIM FLECHE*/
-@keyframes arrowMove {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(10px); }
-}
-.arrow {
-    animation: arrowMove 1.5s infinite ease-in-out;
 }
 
 /* Animation spécifique pour l'icône fa-paper-plane façon fusée */
 @keyframes rocketFly {
   0%   { transform: translate(0, 0) rotate (0deg); }
-  100% { transform: translate(0px, -5px) rotate(0deg); }
+  100% { transform: translate(0px, -3px) rotate(0deg); }
 }
 
 .fa-paper-plane {
     animation: rocketFly 1.5s infinite ease-in-out;
-    transform: rotate(45deg);
+ 
 }
 
+@keyframes arrowMove {
+  0%   { transform: translate(0, 0) rotate (0deg); }
+  100% { transform: translate(5px, 0px) rotate(0deg); }
+}
+.fa-arrow-circle-right {
+     animation: arrowMove 0.7s infinite ease-in-out;
+}
 
 
 /* Complétez votre CSS avec ces règles */
@@ -951,6 +949,7 @@
     transition: all 0.3s ease-in-out;
     height: auto;
 }
+
 
 /* Forcer une hauteur fixe pour les images pour éviter les réorganisations */
 .portfolio-img img {
