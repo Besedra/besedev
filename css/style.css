@@ -913,7 +913,7 @@
     0%, 100% { transform: translateY(0); }
     50% { transform: translateY(-5px); }
 }
-.download-icon, .fa-handshake, .fa-arrow-circle-right, .fa-envelope{
+.download-icon, .fa-handshake, .fa-arrow-circle-right, .email{
     display: inline-block;
     animation: bounceEffect 0.5s infinite ease-in-out;
 }
