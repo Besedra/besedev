@@ -817,7 +817,7 @@ progress {
 }
 
 .g-5,.gy-5 {
-    --bs-gutter-y: 4rem
+    --bs-gutter-y: 2rem
 }
 
 @media (min-width: 576px) {
