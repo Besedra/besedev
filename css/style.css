@@ -78,12 +78,12 @@
 /* code responsive */
 @media (max-width: 576px) { /* Écran mobile */
     .nav-pills .nav-link {
-        font-size: 16px !important; /* Réduit la taille du texte */
+        font-size: 13px !important; /* Réduit la taille du texte */
         padding: 8px !important; /* Ajuste le padding */
     }
 
     .nav-pills .nav-link i {
-        font-size: 16px !important; /* Diminue l'icône */
+        font-size: 13px !important; /* Diminue l'icône */
     }
 
     .display-6 {
@@ -781,6 +781,9 @@
     .display-6, h1 {
         font-size: 18px !important;
         /* text-align: center; */
+    }
+    #portfolio-flters li {
+         font-size: 12px !important;
     }
 
     h5 {
