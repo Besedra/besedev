@@ -850,7 +850,7 @@
 
     /* Ajustement des onglets */
     .nav-pills .nav-link {
-        font-size: 14px !important;
+        font-size: 11px !important;
         padding: 8px !important;
     }
 }
