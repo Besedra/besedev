@@ -1427,7 +1427,8 @@
                                 <button id="submitBtn" class="btn btn-primary btn-lg w-100 py-3 btn-neon" type="submit">
                                   <span id="btnText"><i class="fas fa-paper-plane me-2"></i> Envoyer le message</span>
                                   <span id="btnSpinner" class="spinner-border spinner-border-sm text-light d-none" role="status" aria-hidden="true"></span>
-                                </button>
+                            </button>
+
 
 
                             </div>
@@ -1767,47 +1768,50 @@ $(document).ready(function() {
   const btnText = document.getElementById("btnText");
   const btnSpinner = document.getElementById("btnSpinner");
 
-  form.addEventListener("submit", async function (e) {
+  form.addEventListener("submit", function (e) {
     e.preventDefault();
 
-    // Préparation UI
+    // UI: désactive le bouton, montre le spinner
     btn.disabled = true;
     btnText.classList.add("d-none");
     btnSpinner.classList.remove("d-none");
 
+    // Envoi des données
     const formData = new FormData(form);
 
-    try {
-      const response = await fetch(form.action, {
-        method: "POST",
-        body: formData,
-        headers: { Accept: "application/json" },
-      });
-
+    fetch(form.action, {
+      method: "POST",
+      body: formData,
+      headers: {
+        Accept: "application/json"
+      }
+    })
+    .then(async (response) => {
       const result = await response.json();
 
-      // ✅ test propre du succès
-      if (result.success === true) {
+      if (result && result.success) {
+        // ✅ Succès : rediriger
         window.location.href = "https://besedev.vercel.app/success.html";
-        return; // quitte le script ici
+      } else {
+        // ❌ Erreur Web3Forms
+        throw new Error("Échec Web3Forms");
       }
-
-      // ❌ si result.success === false
-      throw new Error("Web3Forms n’a pas validé l’envoi.");
-      
-    } catch (error) {
-      // Affiche un message d'erreur dans le bouton
+    })
+    .catch((error) => {
+      // UI: afficher erreur dans le bouton
       btnText.innerHTML = "❌ Échec, réessayez";
       btnText.classList.remove("d-none");
       btnSpinner.classList.add("d-none");
       btn.disabled = false;
 
+      // Rétablir le bouton après 4s
       setTimeout(() => {
         btnText.innerHTML = `<i class="fas fa-paper-plane me-2"></i> Envoyer le message`;
       }, 4000);
-    }
+    });
   });
 </script>
+
 
 
 
