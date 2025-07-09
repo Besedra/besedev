@@ -1828,46 +1828,60 @@ $(document).ready(function() {
   form.addEventListener("submit", async function (e) {
     e.preventDefault();
 
-    // Ajoute classe Bootstrap pour voir les erreurs
+    // Nettoyer les erreurs visuelles si existantes
+    form.classList.remove("was-validated");
+
+    // Vérifie la validité
     if (!form.checkValidity()) {
       form.classList.add("was-validated");
       return;
     }
 
-    // Lancer le chargement
+    // Affiche spinner
     btnText.classList.add("d-none");
     btnLoading.classList.remove("d-none");
     submitBtn.disabled = true;
 
-    // Préparer envoi
+    // Envoie le formulaire
     const formData = new FormData(form);
-    const response = await fetch(form.action, {
-      method: "POST",
-      body: formData,
-      headers: { Accept: "application/json" }
-    });
+    try {
+      const response = await fetch(form.action, {
+        method: "POST",
+        body: formData,
+        headers: { Accept: "application/json" }
+      });
+
+      // Réponse OK
+      if (response.ok) {
+        alertBox.className = "alert alert-success mt-3";
+        alertBox.innerHTML = "✅ Message envoyé avec succès.";
+        form.reset();
+      } else {
+        alertBox.className = "alert alert-danger mt-3";
+        alertBox.innerHTML = "❌ Une erreur s’est produite, veuillez réessayer.";
+      }
+    } catch (error) {
+      alertBox.className = "alert alert-danger mt-3";
+      alertBox.innerHTML = "❌ Impossible de contacter le serveur.";
+    }
 
     // Fin du chargement
     btnText.classList.remove("d-none");
     btnLoading.classList.add("d-none");
     submitBtn.disabled = false;
 
-    // Réponse
-    if (response.ok) {
-      alertBox.className = "alert alert-success";
-      alertBox.innerHTML = "✅ Message envoyé avec succès !";
-      form.reset();
-      form.classList.remove("was-validated");
-    } else {
-      alertBox.className = "alert alert-danger";
-      alertBox.innerHTML = "❌ Une erreur est survenue. Essayez à nouveau.";
-    }
+    // Cache les erreurs
+    form.classList.remove("was-validated");
 
-    // Afficher temporairement
+    // Affiche le message temporairement
     alertBox.classList.remove("d-none");
-    setTimeout(() => alertBox.classList.add("d-none"), 5000);
+    setTimeout(() => {
+      alertBox.classList.add("d-none");
+      alertBox.innerHTML = "";
+    }, 5000);
   });
 </script>
+
 
 
 
