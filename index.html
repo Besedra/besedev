@@ -1788,18 +1788,19 @@ $(document).ready(function() {
     })
     .then(async (response) => {
       const result = await response.json();
-
+      
+      // CORRECTION ICI : Vérifier le bon niveau de l'objet
       if (result && result.success) {
         // ✅ Succès : rediriger
         window.location.href = "https://besedev.vercel.app/success.html";
       } else {
         // ❌ Erreur Web3Forms
-        throw new Error("Échec Web3Forms");
+        throw new Error("Échec de l'envoi");
       }
     })
     .catch((error) => {
       // UI: afficher erreur dans le bouton
-      btnText.innerHTML = "❌ Échec, réessayez";
+      btnText.textContent = "❌ Échec, réessayez";
       btnText.classList.remove("d-none");
       btnSpinner.classList.add("d-none");
       btn.disabled = false;
