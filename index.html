@@ -1376,76 +1376,65 @@
                     <h3 class="mb-4 text-primary">Envoyez-moi un message</h3>
                     <p class="text-light-80 mb-4">Remplissez ce formulaire et je vous répondrai dans les plus brefs délais</p>
                     
-                    <!-- ✅ MESSAGE de confirmation -->
-                    <div id="form-alert" class="alert d-none mt-4 text-center" role="alert"></div>
-                    
-                    <!-- ✅ FORMULAIRE -->
-                    <form id="contactForm" action="https://api.web3forms.com/submit" method="POST" novalidate>
-                      <input type="hidden" name="access_key" value="ff97eca4-c022-43e3-b7a3-ab15d7c3b0b0">
-                      <input type="hidden" name="subject" value="Nouveau message du portfolio !">
-                      <input type="hidden" name="from_name" value="Portfolio Web">
-     
-                      <div class="row g-3">
-                        <!-- Nom -->
-                        <div class="col-md-6">
-                          <div class="form-floating">
-                            <input type="text" class="form-control bg-dark text-light" id="name" name="name" placeholder="Votre nom" required>
-                            <label for="name">Votre nom complet</label>
-                            <div class="invalid-feedback">Veuillez entrer votre nom.</div>
-                          </div>
-                        </div>
-                    
-                        <!-- Email -->
-                        <div class="col-md-6">
-                          <div class="form-floating">
-                            <input type="email" class="form-control bg-dark text-light" id="email" name="email" placeholder="Votre email" required>
-                            <label for="email">Votre email professionnel</label>
-                            <div class="invalid-feedback">Veuillez entrer une adresse email valide.</div>
-                          </div>
-                        </div>
-                    
-                        <!-- Sujet -->
-                        <div class="col-12">
-                          <div class="form-floating">
-                            <input type="text" class="form-control bg-dark text-light" id="subject" name="subject" placeholder="Objet" required>
-                            <label for="subject">Objet du message</label>
-                            <div class="invalid-feedback">Veuillez indiquer un objet.</div>
-                          </div>
-                        </div>
-                    
-                        <!-- Message -->
-                        <div class="col-12">
-                          <div class="form-floating">
-                            <textarea class="form-control bg-dark text-light" placeholder="Message" id="message" name="message" style="height: 150px" required></textarea>
-                            <label for="message">Détails de votre projet</label>
-                            <div class="invalid-feedback">Veuillez entrer un message.</div>
-                          </div>
-                        </div>
-                    
-                        <!-- Bouton -->
-                        <div class="col-12 mt-3">
-                          <button id="submitBtn" type="submit" class="btn btn-primary w-100 py-3">
-                            <span id="btnText"><i class="fas fa-paper-plane me-2"></i> Envoyer le message</span>
-                            <span id="btnLoading" class="spinner-border spinner-border-sm text-light d-none" role="status" aria-hidden="true"></span>
-                          </button>
-                        </div>
-                      </div>
-                        <div id="form-alert" class="alert d-none" role="alert"></div>
-                        <div id="formOverlay" class="d-none position-fixed top-0 start-0 w-100 h-100" style="
-                          backdrop-filter: blur(6px);
-                          background-color: rgba(0, 0, 0, 0.5);
-                          z-index: 9999;
-                          display: flex;
-                          justify-content: center;
-                          align-items: center;">
-                          <div class="text-center text-light">
-                            <div class="spinner-border text-info" style="width: 3rem; height: 3rem;" role="status"></div>
-                            <p class="mt-3">Envoi en cours...</p>
-                          </div>
+                    <form action="https://api.web3forms.com/submit" method="POST">
+                        <input type="hidden" name="access_key" value="ff97eca4-c022-43e3-b7a3-ab15d7c3b0b0">
+                        <input type="hidden" name="subject" value="Nouveau message du portfolio !">
+                        <input type="hidden" name="from_name" value="Portfolio Web">
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control bg-dark-80 border-dark-20 text-light" id="name" name="name" placeholder="Votre nom" required>
+                                    <label for="name" class="text-light-60">Votre nom complet</label>
+                                    <div class="invalid-feedback text-light">
+                                        Veuillez entrer votre nom.
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <input type="email" class="form-control bg-dark-80 border-dark-20 text-light" id="email" name="email" placeholder="Votre email" required>
+                                    <label for="email" class="text-light-60">Votre email professionnel</label>
+                                    <div class="invalid-feedback text-light">
+                                        Veuillez entrer une adresse email valide.
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control bg-dark-80 border-dark-20 text-light" id="subject" name="subject" placeholder="Objet du message" required>
+                                    <label for="subject" class="text-light-60">Objet du message</label>
+                                    <div class="invalid-feedback text-light">
+                                        Veuillez spécifier l'objet de votre message.
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    <textarea class="form-control bg-dark-80 border-dark-20 text-light" placeholder="Décrivez votre projet en détails" id="message" name="message" style="height: 150px" required></textarea>
+                                    <label for="message" class="text-light-60">Détails de votre projet</label>
+                                    <div class="invalid-feedback text-light">
+                                        Veuillez décrire votre projet ou demande.
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-12 mt-4">
+                                <button class="btn btn-primary btn-lg w-100 py-3 btn-neon" type="submit">
+                                    <i class="fas fa-paper-plane me-2"></i> Envoyer le message
+                                </button>
+                            </div>
+                            
+                            <div class="col-12">
+                                <p class="small text-muted mb-0">
+                                    <i class="fas fa-lock me-1"></i> Vos informations sont sécurisées et ne seront pas partagées.
+                                </p>
+                            </div>
                         </div>
                     </form>
 
-   
                 </div>
             </div>
         </div>
@@ -1828,69 +1817,5 @@ $(document).ready(function() {
     }, 300);
 });
 </script>
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-  const form = document.getElementById("contactForm");
-  const alertBox = document.getElementById("formAlert");
-  const overlay = document.getElementById("formOverlay");
-
-  form.addEventListener("submit", async function (e) {
-    e.preventDefault();
-
-    // Nettoyage visuel
-    form.classList.remove("was-validated");
-
-    // Validation HTML5
-    if (!form.checkValidity()) {
-      form.classList.add("was-validated");
-      return;
-    }
-
-    // Afficher overlay avec spinner
-    overlay.classList.remove("d-none");
-    overlay.classList.add("show");
-
-    // Envoi de données
-    const formData = new FormData(form);
-    try {
-      const response = await fetch(form.action, {
-        method: "POST",
-        body: formData,
-        headers: { Accept: "application/json" },
-      });
-
-      const result = await response.json();
-
-      if (response.ok && result.success) {
-        alertBox.className = "alert alert-success mt-3 text-center";
-        alertBox.innerText = "✅ Message envoyé avec succès !";
-        form.reset();
-      } else {
-        alertBox.className = "alert alert-danger mt-3 text-center";
-        alertBox.innerText = "❌ Erreur lors de l’envoi du message.";
-      }
-    } catch (error) {
-      alertBox.className = "alert alert-danger mt-3 text-center";
-      alertBox.innerText = "❌ Impossible de contacter le serveur.";
-    }
-
-    // Cache l’overlay
-    overlay.classList.remove("show");
-    overlay.classList.add("d-none");
-
-    // Supprime les erreurs
-    form.classList.remove("was-validated");
-
-    // Affiche message temporaire
-    alertBox.classList.remove("d-none");
-    setTimeout(() => {
-      alertBox.classList.add("d-none");
-      alertBox.innerText = "";
-    }, 5000);
-  });
-});
-</script>
-
-
     </body>
 </html>
