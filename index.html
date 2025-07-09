@@ -1382,8 +1382,8 @@
                         <input type="hidden" name="subject" value="Nouveau message du portfolio !">
 
                         <!-- ✅ Redirection vers page de confirmation -->
-                        <input type="hidden" name="redirect" value="https://besedev.vercel.app/success.html">
-                        <input type="hidden" name="redirectError" value="https://besedev.vercel.app/error.html">
+                        <input type="hidden" name="redirect" value="./success.html">
+                        <input type="hidden" name="redirectError" value="./error.html">
 
                         <div class="row g-3">
                             <div class="col-md-6">
@@ -1822,5 +1822,15 @@ $(document).ready(function() {
     }, 300);
 });
 </script>
+        <script>
+  const form = document.getElementById('contactForm');
+  const button = form.querySelector("button[type='submit']");
+
+  form.addEventListener('submit', function () {
+    button.disabled = true;
+    button.innerHTML = `<span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span> Envoi en cours...`;
+  });
+</script>
+
     </body>
 </html>
