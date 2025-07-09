@@ -1380,59 +1380,60 @@
                     <div id="form-alert" class="alert d-none mt-4 text-center" role="alert"></div>
                     
                     <!-- ✅ FORMULAIRE -->
-                    <form id="contactForm" action="https://api.web3forms.com/submit" method="POST" class="needs-validation" novalidate>
-                        <input type="hidden" name="access_key" value="ff97eca4-c022-43e3-b7a3-ab15d7c3b0b0">
-                        <input type="hidden" name="subject" value="Nouveau message du portfolio !">
-                        <input type="hidden" name="from_name" value="Portfolio Web">
-                    
-                        <div class="row g-3">
-                            <div class="col-md-6">
-                                <div class="form-floating">
-                                    <input type="text" class="form-control bg-dark-80 border-dark-20 text-light" id="name" name="name" placeholder="Votre nom" required>
-                                    <label for="name" class="text-light-60">Votre nom complet</label>
-                                    <div class="invalid-feedback text-light">Veuillez entrer votre nom.</div>
-                                </div>
-                            </div>
-                    
-                            <div class="col-md-6">
-                                <div class="form-floating">
-                                    <input type="email" class="form-control bg-dark-80 border-dark-20 text-light" id="email" name="email" placeholder="Votre email" required>
-                                    <label for="email" class="text-light-60">Votre email professionnel</label>
-                                    <div class="invalid-feedback text-light">Veuillez entrer une adresse email valide.</div>
-                                </div>
-                            </div>
-                    
-                            <div class="col-12">
-                                <div class="form-floating">
-                                    <input type="text" class="form-control bg-dark-80 border-dark-20 text-light" id="subject" name="subject" placeholder="Objet du message" required>
-                                    <label for="subject" class="text-light-60">Objet du message</label>
-                                    <div class="invalid-feedback text-light">Veuillez spécifier l'objet de votre message.</div>
-                                </div>
-                            </div>
-                    
-                            <div class="col-12">
-                                <div class="form-floating">
-                                    <textarea class="form-control bg-dark-80 border-dark-20 text-light" placeholder="Décrivez votre projet en détails" id="message" name="message" style="height: 150px" required></textarea>
-                                    <label for="message" class="text-light-60">Détails de votre projet</label>
-                                    <div class="invalid-feedback text-light">Veuillez décrire votre projet ou demande.</div>
-                                </div>
-                            </div>
-                    
-                            <div class="col-12 mt-4">
-                                <button id="submitBtn" class="btn btn-primary btn-lg w-100 py-3 btn-neon" type="submit">
-                                  <span id="btnText"><i class="fas fa-paper-plane me-2"></i> Envoyer le message</span>
-                                  <span id="btnLoading" class="spinner-border spinner-border-sm d-none" role="status" aria-hidden="true"></span>
-                                </button>
+                    <form id="contactForm" action="https://api.web3forms.com/submit" method="POST" novalidate>
+  <input type="hidden" name="access_key" value="TA_CLE_API_ICI">
+  <input type="hidden" name="subject" value="Nouveau message du portfolio !">
+  <input type="hidden" name="from_name" value="Portfolio Web">
 
-                            </div>
-                    
-                            <div class="col-12">
-                                <p class="small text-muted mb-0">
-                                    <i class="fas fa-lock me-1"></i> Vos informations sont sécurisées et ne seront pas partagées.
-                                </p>
-                            </div>
-                        </div>
-                    </form>
+  <div id="form-alert" class="alert d-none" role="alert"></div>
+
+  <div class="row g-3">
+    <!-- Nom -->
+    <div class="col-md-6">
+      <div class="form-floating">
+        <input type="text" class="form-control bg-dark text-light" id="name" name="name" placeholder="Votre nom" required>
+        <label for="name">Votre nom complet</label>
+        <div class="invalid-feedback">Veuillez entrer votre nom.</div>
+      </div>
+    </div>
+
+    <!-- Email -->
+    <div class="col-md-6">
+      <div class="form-floating">
+        <input type="email" class="form-control bg-dark text-light" id="email" name="email" placeholder="Votre email" required>
+        <label for="email">Votre email professionnel</label>
+        <div class="invalid-feedback">Veuillez entrer une adresse email valide.</div>
+      </div>
+    </div>
+
+    <!-- Sujet -->
+    <div class="col-12">
+      <div class="form-floating">
+        <input type="text" class="form-control bg-dark text-light" id="subject" name="subject" placeholder="Objet" required>
+        <label for="subject">Objet du message</label>
+        <div class="invalid-feedback">Veuillez indiquer un objet.</div>
+      </div>
+    </div>
+
+    <!-- Message -->
+    <div class="col-12">
+      <div class="form-floating">
+        <textarea class="form-control bg-dark text-light" placeholder="Message" id="message" name="message" style="height: 150px" required></textarea>
+        <label for="message">Détails de votre projet</label>
+        <div class="invalid-feedback">Veuillez entrer un message.</div>
+      </div>
+    </div>
+
+    <!-- Bouton -->
+    <div class="col-12 mt-3">
+      <button id="submitBtn" type="submit" class="btn btn-primary w-100 py-3">
+        <span id="btnText"><i class="fas fa-paper-plane me-2"></i> Envoyer le message</span>
+        <span id="btnLoading" class="spinner-border spinner-border-sm text-light d-none" role="status" aria-hidden="true"></span>
+      </button>
+    </div>
+  </div>
+</form>
+
 
 
                 </div>
@@ -1827,14 +1828,18 @@ $(document).ready(function() {
   form.addEventListener("submit", async function (e) {
     e.preventDefault();
 
-    // Ne montre pas les messages d'erreur si le champ est juste vide
-    if (!form.checkValidity()) return;
+    // Ajoute classe Bootstrap pour voir les erreurs
+    if (!form.checkValidity()) {
+      form.classList.add("was-validated");
+      return;
+    }
 
-    // Spinner ON, texte OFF
+    // Lancer le chargement
     btnText.classList.add("d-none");
     btnLoading.classList.remove("d-none");
     submitBtn.disabled = true;
 
+    // Préparer envoi
     const formData = new FormData(form);
     const response = await fetch(form.action, {
       method: "POST",
@@ -1842,25 +1847,28 @@ $(document).ready(function() {
       headers: { Accept: "application/json" }
     });
 
-    // Spinner OFF, texte ON
+    // Fin du chargement
     btnText.classList.remove("d-none");
     btnLoading.classList.add("d-none");
     submitBtn.disabled = false;
 
-    // Affiche l'alerte
+    // Réponse
     if (response.ok) {
       alertBox.className = "alert alert-success";
-      alertBox.innerHTML = "<strong>✅ Message envoyé avec succès !</strong>";
+      alertBox.innerHTML = "✅ Message envoyé avec succès !";
       form.reset();
+      form.classList.remove("was-validated");
     } else {
       alertBox.className = "alert alert-danger";
-      alertBox.innerHTML = "<strong>❌ Une erreur est survenue. Réessayez.</strong>";
+      alertBox.innerHTML = "❌ Une erreur est survenue. Essayez à nouveau.";
     }
 
+    // Afficher temporairement
     alertBox.classList.remove("d-none");
     setTimeout(() => alertBox.classList.add("d-none"), 5000);
   });
 </script>
+
 
 
     </body>
