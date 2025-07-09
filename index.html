@@ -1424,16 +1424,12 @@
                             </div>
                             
                             <div class="col-12 mt-4">
-                                <button class="btn btn-primary btn-lg w-100 py-3 btn-neon" type="submit">
-                                    <i class="fas fa-paper-plane me-2"></i> Envoyer le message
+                                <button id="submitBtn" class="btn btn-primary btn-lg w-100 py-3 btn-neon" type="submit">
+                                  <span id="btnText"><i class="fas fa-paper-plane me-2"></i> Envoyer le message</span>
+                                  <span id="btnSpinner" class="spinner-border spinner-border-sm text-light d-none" role="status" aria-hidden="true"></span>
                                 </button>
+
                             </div>
-                                <div id="form-loading" class="text-center mt-4 d-none">
-                                  <div class="spinner-border text-info" role="status">
-                                    <span class="visually-hidden">Envoi en cours...</span>
-                                  </div>
-                                  <p class="mt-2 text-light">Envoi en cours...</p>
-                                </div>
                             
                             <div class="col-12">
                                 <p class="small text-muted mb-0">
@@ -1766,11 +1762,17 @@ $(document).ready(function() {
 </script>
 <script>
   const form = document.getElementById("contactForm");
-  const spinner = document.getElementById("form-loading");
+  const btn = document.getElementById("submitBtn");
+  const btnText = document.getElementById("btnText");
+  const btnSpinner = document.getElementById("btnSpinner");
 
   form.addEventListener("submit", async function (e) {
     e.preventDefault();
-    spinner.classList.remove("d-none");
+
+    // Désactive le bouton et montre le spinner
+    btn.disabled = true;
+    btnText.classList.add("d-none");
+    btnSpinner.classList.remove("d-none");
 
     const formData = new FormData(form);
 
@@ -1781,27 +1783,27 @@ $(document).ready(function() {
         headers: { Accept: "application/json" },
       });
 
-      const result = await response.json(); // ⬅️ lire la réponse JSON
+      const result = await response.json();
 
       if (response.ok && result.success) {
         window.location.href = "https://besedev.vercel.app/success.html";
       } else {
-        throw new Error("Réponse non valide.");
+        throw new Error("Erreur de soumission.");
       }
     } catch (error) {
-      spinner.innerHTML = `<p class="text-danger">❌ Une erreur est survenue. Veuillez réessayer.</p>`;
+      // Message d’erreur temporaire dans le bouton
+      btnText.innerHTML = "❌ Échec, réessayez";
+      btnText.classList.remove("d-none");
+      btnSpinner.classList.add("d-none");
+      btn.disabled = false;
+
       setTimeout(() => {
-        spinner.classList.add("d-none");
-        spinner.innerHTML = `
-          <div class="spinner-border text-info" role="status">
-            <span class="visually-hidden">Envoi en cours...</span>
-          </div>
-          <p class="mt-2 text-light">Envoi en cours...</p>
-        `;
-      }, 5000);
+        btnText.innerHTML = `<i class="fas fa-paper-plane me-2"></i> Envoyer le message`;
+      }, 4000);
     }
   });
 </script>
+
 
     </body>
 </html>
