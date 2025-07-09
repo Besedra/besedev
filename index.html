@@ -1376,12 +1376,61 @@
                     <h3 class="mb-4 text-primary">Envoyez-moi un message</h3>
                     <p class="text-light-80 mb-4">Remplissez ce formulaire et je vous répondrai dans les plus brefs délais</p>
                     
-                    <form action="https://formsubmit.co/nisedraina999@gmail.com" method="POST">
-  <input type="text" name="name" placeholder="Votre nom" required>
-  <input type="email" name="email" placeholder="Votre e-mail" required>
-  <textarea name="message" placeholder="Votre message" required></textarea>
-  <button type="submit">Envoyer</button>
-</form>
+                    <form action="https://formsubmit.co/nisedraina999@gmail.com" method="POST" id="contactForm">
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control bg-dark-80 border-dark-20 text-light" id="name" name="name" placeholder="Votre nom" required>
+                                    <label for="name" class="text-light-60">Votre nom complet</label>
+                                    <div class="invalid-feedback text-light">
+                                        Veuillez entrer votre nom.
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <input type="email" class="form-control bg-dark-80 border-dark-20 text-light" id="email" name="email" placeholder="Votre email" required>
+                                    <label for="email" class="text-light-60">Votre email professionnel</label>
+                                    <div class="invalid-feedback text-light">
+                                        Veuillez entrer une adresse email valide.
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control bg-dark-80 border-dark-20 text-light" id="subject" name="subject" placeholder="Objet du message" required>
+                                    <label for="subject" class="text-light-60">Objet du message</label>
+                                    <div class="invalid-feedback text-light">
+                                        Veuillez spécifier l'objet de votre message.
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    <textarea class="form-control bg-dark-80 border-dark-20 text-light" placeholder="Décrivez votre projet en détails" id="message" name="message" style="height: 150px" required></textarea>
+                                    <label for="message" class="text-light-60">Détails de votre projet</label>
+                                    <div class="invalid-feedback text-light">
+                                        Veuillez décrire votre projet ou demande.
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-12 mt-4">
+                                <button class="btn btn-primary btn-lg w-100 py-3 btn-neon" type="submit">
+                                    <i class="fas fa-paper-plane me-2"></i> Envoyer le message
+                                </button>
+                            </div>
+                            
+                            <div class="col-12">
+                                <p class="small text-muted mb-0">
+                                    <i class="fas fa-lock me-1"></i> Vos informations sont sécurisées et ne seront pas partagées.
+                                </p>
+                            </div>
+                        </div>
+                    </form>
 
                 </div>
             </div>
