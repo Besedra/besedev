@@ -2974,13 +2974,4 @@
     box-shadow: 0 0 0 0.25rem rgba(0, 210, 255, 0.1);
     color: white !important;
 }
-#formOverlay.show {
-  display: flex !important;
-}
-#formOverlay {
-  opacity: 0;
-  transition: opacity 0.3s ease-in-out;
-}
-#formOverlay.show {
-  opacity: 1;
-}
+
