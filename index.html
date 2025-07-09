@@ -1419,9 +1419,11 @@
                             </div>
                     
                             <div class="col-12 mt-4">
-                                <button class="btn btn-primary btn-lg w-100 py-3 btn-neon" type="submit">
-                                    <i class="fas fa-paper-plane me-2"></i> Envoyer le message
+                                <button id="submitBtn" class="btn btn-primary btn-lg w-100 py-3 btn-neon" type="submit">
+                                  <span id="btnText"><i class="fas fa-paper-plane me-2"></i> Envoyer le message</span>
+                                  <span id="btnLoading" class="spinner-border spinner-border-sm d-none" role="status" aria-hidden="true"></span>
                                 </button>
+
                             </div>
                     
                             <div class="col-12">
@@ -1815,17 +1817,23 @@ $(document).ready(function() {
     }, 300);
 });
 </script>
-        <script>
+<script>
   const form = document.getElementById("contactForm");
   const alertBox = document.getElementById("form-alert");
+  const submitBtn = document.getElementById("submitBtn");
+  const btnText = document.getElementById("btnText");
+  const btnLoading = document.getElementById("btnLoading");
 
   form.addEventListener("submit", async function (e) {
     e.preventDefault();
 
-    if (!form.checkValidity()) {
-      form.classList.add('was-validated');
-      return;
-    }
+    // Ne montre pas les messages d'erreur si le champ est juste vide
+    if (!form.checkValidity()) return;
+
+    // Spinner ON, texte OFF
+    btnText.classList.add("d-none");
+    btnLoading.classList.remove("d-none");
+    submitBtn.disabled = true;
 
     const formData = new FormData(form);
     const response = await fetch(form.action, {
@@ -1834,20 +1842,26 @@ $(document).ready(function() {
       headers: { Accept: "application/json" }
     });
 
+    // Spinner OFF, texte ON
+    btnText.classList.remove("d-none");
+    btnLoading.classList.add("d-none");
+    submitBtn.disabled = false;
+
+    // Affiche l'alerte
     if (response.ok) {
       alertBox.className = "alert alert-success";
       alertBox.innerHTML = "<strong>✅ Message envoyé avec succès !</strong>";
       form.reset();
-      form.classList.remove('was-validated');
     } else {
       alertBox.className = "alert alert-danger";
-      alertBox.innerHTML = "<strong>❌ Une erreur s'est produite. Veuillez réessayer.</strong>";
+      alertBox.innerHTML = "<strong>❌ Une erreur est survenue. Réessayez.</strong>";
     }
 
     alertBox.classList.remove("d-none");
     setTimeout(() => alertBox.classList.add("d-none"), 5000);
   });
 </script>
+
 
     </body>
 </html>
