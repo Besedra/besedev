@@ -1564,27 +1564,6 @@ window.addEventListener('scroll', function() {
 });
 </script>
 
-<script>
-    // Script pour la validation du formulaire et la notification
-    document.addEventListener('DOMContentLoaded', function() {
-        const form = document.getElementById('contactForm');
-        const successToast = new bootstrap.Toast(document.getElementById('formSuccess'));
-        
-        form.addEventListener('submit', function(event) {
-            if (!form.checkValidity()) {
-                event.preventDefault();
-                event.stopPropagation();
-            } else {
-                event.preventDefault();
-                // Ici vous ajouteriez votre logique d'envoi AJAX
-                // Après succès:
-                successToast.show();
-                form.reset();
-            }
-            form.classList.add('was-validated');
-        }, false);
-    });
-    </script>
            
         <script>
         // Animation des compétences au scroll
@@ -1753,47 +1732,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 <!-- anim msg de confirmation  -->
-<script>
-    document.addEventListener("DOMContentLoaded", function() {
-        const contactForm = document.querySelector("#contactForm");
-        const btn = document.querySelector("#btn");
-        const confirmationMessage = document.querySelector("#confirmationMessage");
 
-        contactForm.addEventListener("submit", function(e) {
-            e.preventDefault(); // Empêcher le rechargement de la page
-            btn.innerHTML = '<i class="fa fa-spinner fa-spin"></i> Envoi...';
-            btn.disabled = true;
-
-            const formData = new FormData(this);
-
-            fetch(this.action, {
-                method: this.method,
-                body: formData,
-                headers: { 'Accept': 'application/json' }
-            }).then(response => response.json())
-            .then(data => {
-                if (data.ok) {
-                    confirmationMessage.classList.remove("d-none");
-                    setTimeout(() => {
-                        confirmationMessage.style.opacity = "0";
-                        setTimeout(() => {
-                            confirmationMessage.classList.add("d-none");
-                            confirmationMessage.style.opacity = "1";
-                        }, 1000);
-                    }, 3000);
-                    contactForm.reset();
-                } else {
-                    alert("Erreur lors de l'envoi du message. Veuillez réessayer.");
-                }
-            }).catch(error => {
-                alert("Erreur de connexion. Veuillez vérifier votre connexion internet.");
-            }).finally(() => {
-                btn.innerHTML = '<i class="fa fa-paper-plane"></i> Envoyer';
-                btn.disabled = false;
-            });
-        });
-    });
-</script>
 
 
 <script>
@@ -1819,17 +1758,17 @@ $(document).ready(function() {
     }, 300);
 });
 </script>
-<script>
-document.getElementById('contactForm').addEventListener('submit', function (e) {
-  const form = this;
-  if (!form.checkValidity()) {
-    e.preventDefault(); // bloque l'envoi
-    form.classList.add('was-validated'); // affiche validation
-  } else {
-    form.classList.remove('was-validated'); // retire validation visible
-  }
-});
-</script>
+// <script>
+// document.getElementById('contactForm').addEventListener('submit', function (e) {
+//   const form = this;
+//   if (!form.checkValidity()) {
+//     e.preventDefault(); // bloque l'envoi
+//     form.classList.add('was-validated'); // affiche validation
+//   } else {
+//     form.classList.remove('was-validated'); // retire validation visible
+//   }
+// });
+// </script>
 
 
     </body>
