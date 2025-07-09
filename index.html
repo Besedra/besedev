@@ -1380,22 +1380,13 @@
                     <div id="form-alert" class="alert d-none mt-4 text-center" role="alert"></div>
                     
                     <!-- ✅ FORMULAIRE -->
-                    <form id="contactForm" action="https://api.web3forms.com/submit" method="POST">
-                          <input type="hidden" name="access_key" value="ff97eca4-c022-43e3-b7a3-ab15d7c3b0b0">
+                    <form id="contactForm" action="https://api.web3forms.com/submit" method="POST" novalidate>
+                          <input type="hidden" name="access_key" value="...">
                           <input type="hidden" name="subject" value="Nouveau message du portfolio !">
                           <input type="hidden" name="from_name" value="Portfolio Web">
                         
-                          <div id="form-alert" class="alert d-none" role="alert"></div>
-                        
-                          <div class="row g-3">
-                            <!-- Nom -->
-                            <div class="col-md-6">
-                              <div class="form-floating">
-                                <input type="text" class="form-control bg-dark text-light" id="name" name="name" placeholder="Votre nom" required>
-                                <label for="name">Votre nom complet</label>
-                                <div class="invalid-feedback">Veuillez entrer votre nom.</div>
-                              </div>
-                            </div>
+                          <!-- Champ nom -->
+                          <input type="text" name="name" class="form-control" required />
                         
                             <!-- Email -->
                             <div class="col-md-6">
@@ -1424,18 +1415,17 @@
                               </div>
                             </div>
                         
-                            <!-- Bouton -->
-                            <div class="col-12 mt-3">
-                              <button id="submitBtn" type="submit" class="btn btn-primary w-100 py-3">
-                                <span id="btnText"><i class="fas fa-paper-plane me-2"></i> Envoyer le message</span>
-                                <span id="btnLoading" class="spinner-border spinner-border-sm text-light d-none" role="status" aria-hidden="true"></span>
-                              </button>
-                            </div>
-                          </div>
-                        </form>
+                          <!-- Message confirmation -->
+                          <div id="formAlert" class="alert d-none mt-3" role="alert"></div>
+                        
+                          <!-- Bouton -->
+                          <button type="submit" id="submitBtn">
+                            <span id="btnText">Envoyer</span>
+                            <span id="btnLoading" class="d-none">⏳</span>
+                          </button>
+                    </form>
 
-
-
+   
                 </div>
             </div>
         </div>
@@ -1819,70 +1809,68 @@ $(document).ready(function() {
 });
 </script>
 <script>
+document.addEventListener("DOMContentLoaded", () => {
   const form = document.getElementById("contactForm");
-  const alertBox = document.getElementById("form-alert");
-  const submitBtn = document.getElementById("submitBtn");
+  const alertBox = document.getElementById("formAlert");
   const btnText = document.getElementById("btnText");
   const btnLoading = document.getElementById("btnLoading");
+  const submitBtn = document.getElementById("submitBtn");
 
   form.addEventListener("submit", async function (e) {
     e.preventDefault();
 
-    // Nettoyer les erreurs visuelles si existantes
+    // Empêche les erreurs rouges tant que pas soumis
     form.classList.remove("was-validated");
 
-    // Vérifie la validité
+    // Vérifie la validité manuellement
     if (!form.checkValidity()) {
       form.classList.add("was-validated");
       return;
     }
 
-    // Affiche spinner
+    // Affiche chargement
     btnText.classList.add("d-none");
     btnLoading.classList.remove("d-none");
     submitBtn.disabled = true;
 
-    // Envoie le formulaire
+    // Envoie les données
     const formData = new FormData(form);
     try {
       const response = await fetch(form.action, {
         method: "POST",
         body: formData,
-        headers: { Accept: "application/json" }
+        headers: {
+          Accept: "application/json",
+        },
       });
 
-      // Réponse OK
       if (response.ok) {
         alertBox.className = "alert alert-success mt-3";
-        alertBox.innerHTML = "✅ Message envoyé avec succès.";
+        alertBox.innerText = "✅ Message envoyé avec succès !";
         form.reset();
       } else {
         alertBox.className = "alert alert-danger mt-3";
-        alertBox.innerHTML = "❌ Une erreur s’est produite, veuillez réessayer.";
+        alertBox.innerText = "❌ Une erreur s'est produite.";
       }
     } catch (error) {
       alertBox.className = "alert alert-danger mt-3";
-      alertBox.innerHTML = "❌ Impossible de contacter le serveur.";
+      alertBox.innerText = "❌ Impossible d'envoyer le message.";
     }
 
-    // Fin du chargement
+    // Réinitialise après envoi
     btnText.classList.remove("d-none");
     btnLoading.classList.add("d-none");
     submitBtn.disabled = false;
-
-    // Cache les erreurs
     form.classList.remove("was-validated");
 
-    // Affiche le message temporairement
-    alertBox.classList.remove("d-none");
+    // Masquer l’alerte après 5 secondes
     setTimeout(() => {
       alertBox.classList.add("d-none");
-      alertBox.innerHTML = "";
+      alertBox.innerText = "";
     }, 5000);
   });
+});
 </script>
-
-
 
 
     </body>
