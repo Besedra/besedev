@@ -2977,3 +2977,36 @@
     }
 }
 
+@media (max-width: 576px) {
+  .service-card .d-flex {
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center;
+  }
+
+  .service-icon {
+    margin-right: 0 !important;
+    margin-bottom: 1rem;
+  }
+
+  .service-card h3,
+  .service-card p,
+  .service-card ul,
+  .service-card .badge {
+    text-align: center !important;
+  }
+
+  .service-card ul {
+    padding-left: 0;
+  }
+
+  .service-card li {
+    justify-content: center;
+  }
+
+  .service-card li i {
+    margin-right: 0.5rem;
+  }
+}
+
+
