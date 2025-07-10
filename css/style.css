@@ -767,7 +767,7 @@
 @media (max-width: 768px) {
     /* Réduction des titres */
     .display-6, h1 {
-        font-size: 18px !important;
+        font-size: 30px !important;
         /* text-align: center; */
     }
     #portfolio-flters li {
