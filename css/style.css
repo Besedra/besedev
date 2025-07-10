@@ -2369,7 +2369,6 @@
         /* Responsive */
         @media (max-width: 992px) {
             .header {
-                padding-top: 120px;
                 text-align: center;
             }
             
