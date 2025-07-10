@@ -207,24 +207,24 @@
     transition: .5s;
 }
 
-.navbar .navbar-nav .nav-link {
-    padding: 20px 15px;
-    color: var(--dark);
-    font-size: 18px;
-    font-weight: 600;
-    outline: none;
+/* Lien de navigation normal */
+.navbar .nav-link {
+  color: rgba(255, 255, 255, 0.7);
+  padding: 0.5rem 1rem;
+  transition: color 0.3s ease;
 }
 
-.navbar .navbar-nav .nav-link:hover,
-.navbar .navbar-nav .nav-link.active {
-    color: var(--primary);
+/* Lien au survol */
+.navbar .nav-link:hover {
+  color: #0fd; /* couleur néon ou autre couleur visible */
 }
 
-@media (max-width: 991.98px) {
-    .navbar .navbar-nav .nav-link  {
-        padding: 10px 0;
-    }
+/* Lien actif (cliqué ou section visible) */
+.navbar .nav-link.active {
+  color: #0fd; /* couleur bien visible pour activer */
+  font-weight: 500; /* facultatif : pour le rendre un peu plus fort */
 }
+
 
 
 /*** Header ***/
