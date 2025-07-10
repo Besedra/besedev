@@ -2975,38 +2975,43 @@
     #cacher {
         display: none;
     }
-}
 
-@media (max-width: 576px) {
-  .service-card .d-flex {
+    @media (max-width: 576px) {
+  /* Container principal de l'icône + titre */
+  .service-card .d-flex.align-items-start {
     flex-direction: column !important;
     align-items: center !important;
     text-align: center;
   }
 
+  /* Icône principale (ex: panier, code, etc.) */
   .service-icon {
     margin-right: 0 !important;
     margin-bottom: 1rem;
   }
 
+  /* Titre et paragraphe centrés */
   .service-card h3,
-  .service-card p,
-  .service-card ul,
-  .service-card .badge {
+  .service-card p {
     text-align: center !important;
   }
 
-  .service-card ul {
-    padding-left: 0;
+  /* ✅ Laisse les listes alignées à gauche */
+  .service-card ul.service-features {
+    text-align: left !important;
+    padding-left: 0.5rem;
   }
 
-  .service-card li {
-    justify-content: center;
+  .service-card ul.service-features li {
+    justify-content: flex-start !important;
   }
 
-  .service-card li i {
-    margin-right: 0.5rem;
+  /* Badges centrés aussi */
+  .service-card .badge {
+    display: inline-block;
+    margin-right: 0.25rem;
   }
 }
+
 
 
