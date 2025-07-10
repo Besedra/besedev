@@ -2971,4 +2971,6 @@
     box-shadow: 0 0 0 0.25rem rgba(0, 210, 255, 0.1);
     color: white !important;
 }
-
+#cacher {
+    display: none;
+}
