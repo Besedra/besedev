@@ -2980,8 +2980,8 @@
   /* Container principal de l'icône + titre */
   .service-card .d-flex.align-items-start {
     flex-direction: column !important;
-    align-items: center !important;
-    text-align: center;
+/*     align-items: center !important;
+    text-align: center; */
   }
 
   /* Icône principale (ex: panier, code, etc.) */
@@ -2999,7 +2999,6 @@
   /* ✅ Laisse les listes alignées à gauche */
   .service-card ul.service-features {
     text-align: left !important;
-    padding-left: 0.5rem;
   }
 
   .service-card ul.service-features li {
