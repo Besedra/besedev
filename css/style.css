@@ -2990,12 +2990,6 @@
     margin-bottom: 1rem;
   }
 
-  /* Titre et paragraphe centrés */
-  .service-card h3,
-  .service-card p {
-    text-align: center !important;
-  }
-
   /* ✅ Laisse les listes alignées à gauche */
   .service-card ul.service-features {
     text-align: left !important;
