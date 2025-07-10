@@ -152,8 +152,8 @@
                         <span class="text-gradient-neon">Expertise & Valeurs</span>
                         <i class="fas fa-user-tie ms-3 text-primary"></i>
                     </h2>
-                    <a href="#contact" class="btn btn-outline-primary btn-lg px-4 py-3 btn-neon-outline">
-                        <i class="fas fa-calendar-check me-2"></i> Disponible pour des missions
+                    <a href="#contactez" class="btn btn-outline-primary btn-lg px-4 py-3 btn-neon-outline">
+                        <i class="fas fa-calendar-check me-2"></i> Parlons-en
                     </a>
                 </div>
                 
@@ -510,7 +510,7 @@
                 <p class="lead text-light-80">Formations et diplômes pour une expertise technique solide</p>
             </div>
             <div class="col-md-4 text-md-end">
-                <a href="https://www.linkedin.com/in/sedra-dev/details/certifications/" class="btn btn-primary btn-lg px-4 py-3 btn-neon">
+                <a href="https://www.linkedin.com/in/sedra-dev/details/certifications/" class="-primary btn-lg px-4 py-3 btn-neon">
                     <i class="fas fa-certificate me-2"></i> Voir mes certifications
                 </a>
             </div>
@@ -867,7 +867,7 @@
                 <p class="lead text-muted">Solutions digitales sur mesure pour propulser votre activité</p>
             </div>
             <div class="col-md-4 text-md-end">
-                <a href="#contact" class="btn btn-outline-primary btn-lg px-4 py-3 btn-neon-outline">
+                <a href="#contactez" class="btn btn-outline-primary btn-lg px-4 py-3 btn-neon-outline">
                     <i class="fas fa-paper-plane me-2"></i> Demander un devis
                 </a>
             </div>
@@ -999,7 +999,7 @@
                     <i class="fas fa-code text-info"></i>
                   </div>
                   <div>
-                    <h3 class="mb-3 text-light">Intégration HTML/CSS</h3>
+                    <h3 class="mb-3 text-light">Intégration web</h3>
                     <p class="text-light-80 mb-4">Intégration pixel-perfect et mobile first à partir de maquettes ou de contenus à structurer.</p>
                     <ul class="service-features list-unstyled mb-0">
                       <li class="mb-3 d-flex"><i class="fas fa-check-circle text-success mt-1 me-3"></i>
@@ -1032,7 +1032,7 @@
                 <h3 class="mb-4 text-light">Un projet spécifique ?</h3>
                 <p class="text-light-80 mb-4 mx-auto" style="max-width: 600px;">Que vous ayez besoin d'une solution unique ou d'un accompagnement complet, parlons-en pour trouver la meilleure approche.</p>
                 <a href="#contactez" class="btn btn-primary btn-lg px-5 py-3 btn-neon">
-                    <i class="fas fa-comments me-2"></i> Discutons de votre projet
+                    <i class="fas fa-comments me-2"></i> Lancer mon projet web
                 </a>
             </div>
         </div>
