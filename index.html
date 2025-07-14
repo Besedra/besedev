@@ -1751,5 +1751,100 @@ $(document).ready(function() {
 });
 </script>
 
+        <script>
+    // Ajoutez ce script à votre page pour garantir que le filtre s'initialise correctement après le chargement complet
+$(document).ready(function() {
+    // Petit délai pour s'assurer que toutes les images sont chargées
+    setTimeout(function() {
+        // Réinitialisation du conteneur de portfolio
+        $('.portfolio-container').isotope({
+            itemSelector: '.portfolio-item',
+            layoutMode: 'fitRows'
+        });
+        
+        // Gestion des filtres
+        $('#portfolio-flters li').on('click', function() {
+            $('#portfolio-flters li').removeClass('active');
+            $(this).addClass('active');
+            
+            $('.portfolio-container').isotope({
+                filter: $(this).data('filter')
+            });
+        });
+    }, 300);
+});
+</script>
+
+<script>
+
+// Smooth scroll et navigation active
+document.addEventListener('DOMContentLoaded', function() {
+    const navLinks = document.querySelectorAll('.nav-link[href^="#"]');
+    const sections = document.querySelectorAll('section[id]');
+    
+    // Smooth scroll optimisé
+    navLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href');
+            const targetSection = document.querySelector(targetId);
+            
+            if (targetSection) {
+                const navHeight = document.querySelector('.navbar').offsetHeight;
+                const targetPosition = targetSection.offsetTop - navHeight - 20;
+                
+                // Animation de scroll optimisée
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: 'smooth'
+                });
+                
+                // Fermer le menu mobile après le clic
+                const navbarCollapse = document.querySelector('.navbar-collapse');
+                if (navbarCollapse && navbarCollapse.classList.contains('show')) {
+                    navbarCollapse.classList.remove('show');
+                }
+            }
+        });
+    });
+    
+    // Mise à jour de l'état actif lors du scroll
+    function updateActiveLink() {
+        const scrollPosition = window.scrollY + 100;
+        
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.offsetHeight;
+            const sectionId = section.getAttribute('id');
+            
+            if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href') === '#' + sectionId) {
+                        link.classList.add('active');
+                    }
+                });
+            }
+        });
+    }
+    
+    // Throttle pour optimiser les performances
+    let isScrolling = false;
+    window.addEventListener('scroll', function() {
+        if (!isScrolling) {
+            window.requestAnimationFrame(function() {
+                updateActiveLink();
+                isScrolling = false;
+            });
+            isScrolling = true;
+        }
+    });
+    
+    // Vérifier l'état initial
+    updateActiveLink();
+});
+
+</script>
+
     </body>
 </html>
