@@ -3000,5 +3000,35 @@
   }
 }
 
+/* Bouton Back to Top */
+.back-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 45px;
+  height: 45px;
+  background-color: #007BFF;
+  color: white;
+  font-size: 24px;
+  text-align: center;
+  line-height: 45px;
+  border-radius: 50%;
+  z-index: 1000;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.4s ease;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.back-to-top:hover {
+  background-color: #0056b3;
+}
+
+/* Affichage lorsqu'on scrolle */
+.back-to-top.show {
+  opacity: 1;
+  visibility: visible;
+}
 
 
