@@ -1545,20 +1545,34 @@
   </div>
 </footer>
 
+<!-- Back to Top Button -->
+<a href="#" class="back-to-top" id="backToTop" aria-label="Retour en haut">
+  &#8679;
+</a>
 
 <script>
 // Mise à jour dynamique de l'année de copyright
 document.querySelector('.current-year').textContent = new Date().getFullYear();
 
-// Bouton back-to-top
-window.addEventListener('scroll', function() {
-    var backToTop = document.querySelector('.back-to-top');
-    if (window.pageYOffset > 300) {
-        backToTop.style.display = 'flex';
+<script>
+  // Bouton retour en haut
+  const backToTopButton = document.getElementById('backToTop');
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 300) {
+      backToTopButton.classList.add('show');
     } else {
-        backToTop.style.display = 'none';
+      backToTopButton.classList.remove('show');
     }
-});
+  });
+
+  backToTopButton.addEventListener('click', (e) => {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+</script>
+
+    
 </script>
 
            
