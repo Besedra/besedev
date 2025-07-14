@@ -1785,6 +1785,9 @@ $(document).ready(function() {
     e.preventDefault();
     window.scrollTo(0, 0); // pas de comportement fluide, direct
   });
+    if (window.scrollY > 300) {
+  backToTopButton.style.display = "block";
+}
 </script>
 
     </body>
