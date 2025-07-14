@@ -2991,25 +2991,6 @@
   }
 }
 
-.back-to-top {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background: #007BFF;
-  color: white;
-  font-size: 20px;
-  width: 40px;
-  height: 40px;
-  text-align: center;
-  line-height: 40px;
-  border-radius: 50%;
-  cursor: pointer;
-  z-index: 1000;
-}
 
-.back-to-top:hover {
-background: #0056b3;
-z-index: 9999;
-}
 
 
