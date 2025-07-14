@@ -1452,10 +1452,6 @@
         </div>
     </div>
 </div>
-
-<a href="#" class="back-to-top" id="backToTop" aria-label="Retour en haut">
-  &#8679;
-</a>
         <!-- ====== Footer Start ====== -->
    <footer class="footer position-relative wow fadeInUp" data-wow-delay=".15s" style="background: rgba(30, 41, 59, 0.6); backdrop-filter: blur(10px);">
   <div class="container position-relative py-5">
@@ -1764,28 +1760,6 @@ $(document).ready(function() {
         });
     }, 300);
 });
-</script>
-
-<script>
-  const backToTopButton = document.getElementById("backToTop");
-
-  // Afficher le bouton au scroll
-  window.addEventListener("scroll", function () {
-    if (window.scrollY > 300) {
-      backToTopButton.style.display = "block";
-    } else {
-      backToTopButton.style.display = "none";
-    }
-  });
-
-  // Scroll instantané vers le haut (rapide et fluide)
-  backToTopButton.addEventListener("click", function (e) {
-    e.preventDefault();
-    window.scrollTo(0, 0); // pas de comportement fluide, direct
-  });
-    if (window.scrollY > 300) {
-  backToTopButton.style.display = "block";
-}
 </script>
 
     </body>
