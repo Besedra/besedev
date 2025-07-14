@@ -3009,7 +3009,8 @@
 }
 
 .back-to-top:hover {
-  background: #0056b3;
+background: #0056b3;
+z-index: 9999;
 }
 
 
