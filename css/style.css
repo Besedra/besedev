@@ -1065,7 +1065,7 @@
 
 .nav-link:hover,
 .nav-link.active {
-    color: white !important;
+    color: #6c5ce7 !important;
 }
 
 .nav-link.active::after {
