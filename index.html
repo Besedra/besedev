@@ -1554,21 +1554,25 @@
 document.querySelector('.current-year').textContent = new Date().getFullYear();
 
 <script>
-  // Bouton retour en haut
-  const backToTopButton = document.getElementById('backToTop');
+ <script>
+  const backToTopButton = document.getElementById("backToTop");
 
-  window.addEventListener('scroll', () => {
+  // Afficher le bouton au scroll
+  window.addEventListener("scroll", function () {
     if (window.scrollY > 300) {
-      backToTopButton.classList.add('show');
+      backToTopButton.style.display = "block";
     } else {
-      backToTopButton.classList.remove('show');
+      backToTopButton.style.display = "none";
     }
   });
 
-  backToTopButton.addEventListener('click', (e) => {
+  // Scroll 
+  backToTopButton.addEventListener("click", function (e) {
     e.preventDefault();
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo(0, 0); 
   });
+</script>
+
 </script>
 
     
