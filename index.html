@@ -1762,29 +1762,32 @@ $(document).ready(function() {
     }, 300);
 });
 </script>
+
+        <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
         <script>
-  const sections = document.querySelectorAll("section[id]");
+          AOS.init();
+        </script>
+
+        <script>
+  const sections = document.querySelectorAll("section, header, .container-fluid");
   const options = {
     threshold: 0.5
   };
 
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        const id = entry.target.id;
-        history.replaceState(null, "", `/${id}`);
+      if (entry.isIntersecting && entry.target.id) {
+        history.replaceState(null, null, `#${entry.target.id}`);
       }
     });
   }, options);
 
   sections.forEach(section => {
-    observer.observe(section);
+    if (section.id) {
+      observer.observe(section);
+    }
   });
 </script>
 
-        <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-        <script>
-          AOS.init();
-        </script>
     </body>
 </html>
