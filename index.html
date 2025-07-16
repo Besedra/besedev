@@ -33,7 +33,7 @@
             <img src="img/Logo.svg" class="animate-logo" alt="Logo de chargement" style="width: 100px; height: 100px;">
         </div>
 
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top py-2 wow fadeIn" data-wow-delay="0.1s">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top py-2>
         <div class="container">
         <!-- Logo centré -->
         <a href="#accueil" class="navbar-brand mx-auto mx-lg-0 scaleanim">
@@ -1455,7 +1455,7 @@
     </div>
 </div>
         <!-- ====== Footer Start ====== -->
-   <footer class="footer position-relative wow fadeInUp" data-wow-delay=".15s" style="background: rgba(30, 41, 59, 0.6); backdrop-filter: blur(10px);">
+   <footer class="footer position-relative style="background: rgba(30, 41, 59, 0.6); backdrop-filter: blur(10px);">
   <div class="container position-relative py-5">
     <div class="row gy-4">
 
@@ -1603,7 +1603,6 @@ document.querySelector('.current-year').textContent = new Date().getFullYear();
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/wow/wow.min.js"></script>
     <script src="lib/easing/easing.min.js"></script>
     <script src="lib/waypoints/waypoints.min.js"></script>
     <script src="lib/typed/typed.min.js"></script>
@@ -1726,18 +1725,6 @@ document.addEventListener('DOMContentLoaded', function() {
     animateSkills(); // Pour les éléments déjà visibles
 });   
     </script>
-    <script>
-// Vérification du chargement des éléments
-document.addEventListener('DOMContentLoaded', function() {
-    console.log('Compétences chargées');
-    if(typeof Wow === 'undefined') {
-        console.error('Wow.js non chargé');
-    }
-    if(typeof $ === 'undefined') {
-        console.error('jQuery non chargé');
-    }
-});
-</script>
 
 
 <script>
