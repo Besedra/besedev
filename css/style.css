@@ -1919,7 +1919,7 @@ html, body {
 
 .nav-link.active,
 .nav-link:hover {
-    color: white !important;
+    color: #00d2ff !important;
 }
 .nav-link {
     position: relative;
