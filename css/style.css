@@ -1,5 +1,14 @@
 
+body {
+  overflow-x: hidden !important;
 }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
 
 /* updatecode 17*/
 .footer {
@@ -196,6 +205,9 @@
 .navbar.fixed-top {
     display: none;
     transition: .5s;
+}
+.navbar {
+  z-index: 1050 !important;
 }
 
 /* Lien de navigation normal */
