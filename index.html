@@ -1585,6 +1585,19 @@ document.querySelector('.current-year').textContent = new Date().getFullYear();
     <script src="lib/isotope/isotope.pkgd.min.js"></script>
     <script src="lib/lightbox/js/lightbox.min.js"></script>
 
+        <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const skillBars = document.querySelectorAll(".skill-level");
+
+    skillBars.forEach((bar) => {
+      const level = bar.getAttribute("data-level");
+      if (level) {
+        bar.style.setProperty("--level", level + "%");
+      }
+    });
+  });
+</script>
+
        <script>
           document.addEventListener('DOMContentLoaded', function() {
     // Filtrage des projets
