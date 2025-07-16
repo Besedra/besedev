@@ -2569,23 +2569,26 @@
 }
 
 .skill-level {
-    height: 6px;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 3px;
     position: relative;
+    height: 6px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
     overflow: hidden;
+    --level: 0%;
 }
 
+
 .skill-level::after {
-    content: '';
+    content: "";
     position: absolute;
     left: 0;
     top: 0;
     height: 100%;
-    width: 0;
-    background: linear-gradient(90deg, #00d2ff, #3a7bd5);
+    width: var(--level);
+    background: linear-gradient(90deg, rgb(0, 210, 255), rgb(58, 123, 213));
     border-radius: 3px;
     transition: width 1s ease-out;
+    min-width: 2px; 
 }
 
 .skill-level[data-level="95"]::after { width: 95%; }
