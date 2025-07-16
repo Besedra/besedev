@@ -1,3 +1,11 @@
+
+  const path = window.location.pathname;
+  if (path !== "/" && document.getElementById(path.slice(1))) {
+    document.getElementById(path.slice(1)).scrollIntoView({ behavior: "smooth" });
+  }
+
+
+
 (function ($) {
     "use strict";
 
@@ -106,4 +114,6 @@
 
     
 })(jQuery);
+
+
 
