@@ -1932,8 +1932,7 @@ html, body {
 
 .nav-link.active,
 .nav-link:hover {
-    color: #6c5ce7 !important;
-   
+    color: linear-gradient(90deg, #00d2ff 0%, #3a7bd5 50%, #ff00aa 100%) !important;
 }
 
 
@@ -2576,7 +2575,7 @@ html, body {
 
 .skill-level {
     height: 6px;
-    background: rgba(255, 255, 255, 0.1);
+    background: linear-gradient(90deg, var(--primary) 0%, var(--secondary) 100%);
     border-radius: 3px;
     position: relative;
     overflow: hidden;
