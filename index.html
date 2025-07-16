@@ -1762,6 +1762,26 @@ $(document).ready(function() {
     }, 300);
 });
 </script>
+        <script>
+  const sections = document.querySelectorAll("section[id]");
+  const options = {
+    threshold: 0.5
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const id = entry.target.id;
+        history.replaceState(null, "", `/${id}`);
+      }
+    });
+  }, options);
+
+  sections.forEach(section => {
+    observer.observe(section);
+  });
+</script>
+
         <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
         <script>
           AOS.init();
