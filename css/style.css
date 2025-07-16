@@ -1268,13 +1268,13 @@
     width: 25px;
 }
 
-.skill-level {
+/* .skill-level {
     height: 8px;
     background: #2d2d2d;
     border-radius: 10px;
     overflow: hidden;
     position: relative;
-}
+} */
 
 .skill-level::after {
     content: '';
