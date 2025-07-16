@@ -17,8 +17,8 @@
 
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
-        
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+        <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
         <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
         <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
 
@@ -33,7 +33,7 @@
             <img src="img/Logo.svg" class="animate-logo" alt="Logo de chargement" style="width: 100px; height: 100px;">
         </div>
 
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top py-2 wow fadeIn" data-wow-delay="0.1s">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top py-2" data-wow-delay="0.1s">
         <div class="container">
         <!-- Logo centré -->
         <a href="#accueil" class="navbar-brand mx-auto mx-lg-0 scaleanim">
@@ -145,7 +145,7 @@
 
     <div class="container position-relative z-index-1">
         <!-- Titre + Bouton -->
-        <div class="row mb-5 wow animate__fadeInUp">
+        <div class="row mb-5 ">
             <div class="col-12">
                 <div class="d-flex flex-column flex-md-row justify-content-between align-items-center">
                     <h2 class="display-5 mb-3 mb-md-0">
@@ -163,7 +163,7 @@
         <!-- Contenu -->
         <div class="row g-4 g-lg-5">
             <!-- Colonne Qui suis-je -->
-            <div class="col-lg-6 wow animate__fadeInLeft">
+            <div class="col-lg-6 ">
                 <div class="about-card p-4 p-lg-5 rounded-4 neon-hover-card h-100">
                     <h3 class="mb-4 text-gradient-neon">Qui suis-je ?</h3>
                     <div class="d-flex mb-4 align-items-start">
@@ -198,7 +198,7 @@
             </div>
 
             <!-- Colonne Approche -->
-            <div class="col-lg-6 wow animate__fadeInRight">
+            <div class="col-lg-6 data-aos="fade-up"">
                 <div class="about-card p-4 p-lg-5 rounded-4 neon-hover-card h-100">
                     <h3 class="mb-4 text-gradient-neon">Mon Approche</h3>
                     
@@ -247,7 +247,7 @@
 
     <div class="container position-relative z-index-1">
         <!-- En-tête -->
-        <div class="row align-items-center mb-5 wow animate__fadeInUp" data-wow-delay="0.1s">
+        <div class="row align-items-center mb-5" data-wow-delay="0.1s">
             <div class="col-md-8">
                 <h2 class="display-5 mb-3">
                     <span class="text-gradient-neon">Expertise Technique</span>
@@ -266,7 +266,7 @@
         <!-- Grille de compétences -->
         <div class="row g-4 g-lg-5">
             <!-- Frontend -->
-            <div class="col-lg-4 wow animate__fadeInUp" data-wow-delay="0.2s">
+            <div class="col-lg-4 " data-wow-delay="0.2s">
                 <div class="skill-category p-4 p-lg-5 rounded-4 neon-hover-card h-100">
                     <div class="category-header d-flex align-items-center mb-4">
                         <div class="icon-box bg-dark-80 rounded-circle flex-shrink-0 me-3">
@@ -340,7 +340,7 @@
             </div>
 
             <!-- Backend -->
-            <div class="col-lg-4 wow animate__fadeInUp" data-wow-delay="0.3s">
+            <div class="col-lg-4 " data-wow-delay="0.3s">
                 <div class="skill-category p-4 p-lg-5 rounded-4 neon-hover-card h-100">
                     <div class="category-header d-flex align-items-center mb-4">
                         <div class="icon-box bg-dark-80 rounded-circle flex-shrink-0 me-3">
@@ -405,7 +405,7 @@
             </div>
 
             <!-- Outils & CMS -->
-            <div class="col-lg-4 wow animate__fadeInUp" data-wow-delay="0.4s">
+            <div class="col-lg-4 " data-wow-delay="0.4s">
                 <div class="skill-category p-4 p-lg-5 rounded-4 neon-hover-card h-100">
                     <div class="category-header d-flex align-items-center mb-4">
                         <div class="icon-box bg-dark-80 rounded-circle flex-shrink-0 me-3">
@@ -501,7 +501,7 @@
     
     <div class="container position-relative z-index-1">
         <!-- En-tête -->
-        <div class="row align-items-center mb-5 wow animate__fadeInUp" data-wow-delay="0.1s">
+        <div class="row align-items-center mb-5 " data-wow-delay="0.1s">
             <div class="col-md-8">
                 <h2 class="display-5 mb-3">
                     <span class="text-gradient-neon">Mon Parcours</span>
@@ -542,7 +542,7 @@
                         <div id="formations" class="tab-pane fade show active" role="tabpanel">
                             <div class="row g-4">
                                 <!-- Formation 1 -->
-                                <div class="col-md-6 wow animate__fadeInUp" data-wow-delay="0.4s">
+                                <div class="col-md-6 " data-wow-delay="0.4s">
                                     <div class="service-card neon-hover-car p-4 p-lg-5 rounded-4 h-100" style="background: rgba(30, 41, 59, 0.6); backdrop-filter: blur(10px); border: 1px solid rgba(0, 210, 255, 0.1);">
                                         <div class="d-flex align-items-start">
                                             <div class="education-icon bg-primary-20 rounded-3 d-flex align-items-center justify-content-center me-4" style="width: 60px; height: 60px;">
@@ -568,7 +568,7 @@
 
                                 
                                 <!-- Formation 2 -->
-                                <div class="col-md-6 wow animate__fadeInUp" data-wow-delay="0.4s">
+                                <div class="col-md-6 " data-wow-delay="0.4s">
                                     <div class="service-card neon-hover-car p-4 p-lg-5 rounded-4 h-100" style="background: rgba(30, 41, 59, 0.6); backdrop-filter: blur(10px); border: 1px solid rgba(0, 210, 255, 0.1);">
                                         <div class="d-flex align-items-start">
                                             <div class="education-icon bg-primary-20 rounded-3 d-flex align-items-center justify-content-center me-4" style="width: 60px; height: 60px;">
@@ -595,7 +595,7 @@
 
                                 
                                 <!-- Formation 3 -->
-                                <div class="col-md-6 wow animate__fadeInUp" data-wow-delay="0.4s">
+                                <div class="col-md-6 " data-wow-delay="0.4s">
                                     <div class="service-card neon-hover-car p-4 p-lg-5 rounded-4 h-100" style="background: rgba(30, 41, 59, 0.6); backdrop-filter: blur(10px); border: 1px solid rgba(0, 210, 255, 0.1);">
                                         <div class="d-flex align-items-start">
                                             <div class="education-icon bg-primary-20 rounded-3 d-flex align-items-center justify-content-center me-4" style="width: 60px; height: 60px;">
@@ -618,7 +618,7 @@
                                     </div>
                                 </div>
 
-                                <div class="col-md-6 wow animate__fadeInUp" data-wow-delay="0.4s">
+                                <div class="col-md-6 " data-wow-delay="0.4s">
                                     <div class="service-card neon-hover-car p-4 p-lg-5 rounded-4 h-100" style="background: rgba(30, 41, 59, 0.6); backdrop-filter: blur(10px); border: 1px solid rgba(0, 210, 255, 0.1);">
                                         <div class="d-flex align-items-start">
                                             <div class="education-icon bg-primary-20 rounded-3 d-flex align-items-center justify-content-center me-4" style="width: 60px; height: 60px;">
@@ -641,7 +641,7 @@
                                     </div>
                                 </div>
 
-                                <div class="col-md-6 wow animate__fadeInUp" data-wow-delay="0.4s">
+                                <div class="col-md-6 " data-wow-delay="0.4s">
                                     <div class="service-card neon-hover-car p-4 p-lg-5 rounded-4 h-100" style="background: rgba(30, 41, 59, 0.6); backdrop-filter: blur(10px); border: 1px solid rgba(0, 210, 255, 0.1);">
                                         <div class="d-flex align-items-start">
                                             <div class="education-icon bg-primary-20 rounded-3 d-flex align-items-center justify-content-center me-4" style="width: 60px; height: 60px;">
@@ -664,7 +664,7 @@
                                     </div>
                                 </div>
 
-                                <div class="col-md-6 wow animate__fadeInUp" data-wow-delay="0.4s">
+                                <div class="col-md-6 " data-wow-delay="0.4s">
                                     <div class="service-card neon-hover-car p-4 p-lg-5 rounded-4 h-100" style="background: rgba(30, 41, 59, 0.6); backdrop-filter: blur(10px); border: 1px solid rgba(0, 210, 255, 0.1);">
                                         <div class="d-flex align-items-start">
                                             <div class="education-icon bg-primary-20 rounded-3 d-flex align-items-center justify-content-center me-4" style="width: 60px; height: 60px;">
@@ -688,7 +688,7 @@
                                     </div>
                                 </div>
 
-                                <div class="col-md-6 wow animate__fadeInUp" data-wow-delay="0.4s">
+                                <div class="col-md-6 " data-wow-delay="0.4s">
                                     <div class="service-card neon-hover-car p-4 p-lg-5 rounded-4 h-100" style="background: rgba(30, 41, 59, 0.6); backdrop-filter: blur(10px); border: 1px solid rgba(0, 210, 255, 0.1);">
                                         <div class="d-flex align-items-start">
                                             <div class="education-icon bg-primary-20 rounded-3 d-flex align-items-center justify-content-center me-4" style="width: 60px; height: 60px;">
@@ -713,7 +713,7 @@
                                     </div>
                                 </div>
 
-                                <div class="col-md-6 wow animate__fadeInUp" data-wow-delay="0.4s">
+                                <div class="col-md-6 " data-wow-delay="0.4s">
                                     <div class="service-card neon-hover-car p-4 p-lg-5 rounded-4 h-100" style="background: rgba(30, 41, 59, 0.6); backdrop-filter: blur(10px); border: 1px solid rgba(0, 210, 255, 0.1);">
                                         <div class="d-flex align-items-start">
                                             <div class="education-icon bg-primary-20 rounded-3 d-flex align-items-center justify-content-center me-4" style="width: 60px; height: 60px;">
@@ -738,7 +738,7 @@
                                     </div>
                                 </div>
 
-                                <div class="col-md-6 wow animate__fadeInUp" data-wow-delay="0.4s">
+                                <div class="col-md-6 " data-wow-delay="0.4s">
                                     <div class="service-card neon-hover-car p-4 p-lg-5 rounded-4 h-100" style="background: rgba(30, 41, 59, 0.6); backdrop-filter: blur(10px); border: 1px solid rgba(0, 210, 255, 0.1);">
                                         <div class="d-flex align-items-start">
                                             <div class="education-icon bg-primary-20 rounded-3 d-flex align-items-center justify-content-center me-4" style="width: 60px; height: 60px;">
@@ -762,7 +762,7 @@
                                     </div>
                                 </div>
 
-                                <div class="col-md-6 wow animate__fadeInUp" data-wow-delay="0.4s">
+                                <div class="col-md-6 " data-wow-delay="0.4s">
                                     <div class="service-card neon-hover-car p-4 p-lg-5 rounded-4 h-100" style="background: rgba(30, 41, 59, 0.6); backdrop-filter: blur(10px); border: 1px solid rgba(0, 210, 255, 0.1);">
                                         <div class="d-flex align-items-start">
                                             <div class="education-icon bg-primary-20 rounded-3 d-flex align-items-center justify-content-center me-4" style="width: 60px; height: 60px;">
@@ -799,7 +799,7 @@
                         <div id="diplomes" class="tab-pane fade" role="tabpanel">
                             <div class="row g-4">
                                 <!-- Diplôme 1 -->
-                                <div class="col-md-6 wow animate__fadeInUp" data-wow-delay="0.2s">
+                                <div class="col-md-6 " data-wow-delay="0.2s">
                                     <div class="service-card neon-hover-car p-4 p-lg-5 rounded-4 h-100" style="background: rgba(30, 41, 59, 0.6); backdrop-filter: blur(10px); border: 1px solid rgba(0, 210, 255, 0.1);">
                                         <div class="d-flex align-items-start">
                                             <div class="education-icon bg-primary-20 rounded-3 d-flex align-items-center justify-content-center me-4" style="width: 60px; height: 60px;">
@@ -818,7 +818,7 @@
                                 </div>
                                 
                                 <!-- Diplôme 2 -->
-                                <div class="col-md-6 wow animate__fadeInUp" data-wow-delay="0.3s">
+                                <div class="col-md-6 " data-wow-delay="0.3s">
                                     <div class="service-card neon-hover-car p-4 p-lg-5 rounded-4 h-100" style="background: rgba(30, 41, 59, 0.6); backdrop-filter: blur(10px); border: 1px solid rgba(0, 210, 255, 0.1);">
                                         <div class="d-flex align-items-start">
                                             <div class="education-icon bg-primary-20 rounded-3 d-flex align-items-center justify-content-center me-4" style="width: 60px; height: 60px;">
@@ -858,7 +858,7 @@
 
     <div class="container position-relative z-index-1">
         <!-- En-tête -->
-        <div class="row align-items-center mb-5 wow animate__fadeInUp" data-wow-delay="0.1s">
+        <div class="row align-items-center mb-5 " data-wow-delay="0.1s">
             <div class="col-md-8">
                 <h2 class="display-5 mb-3">
                     <span class="text-gradient-neon">Mes Services</span>
@@ -877,7 +877,7 @@
         <!-- Grille de services -->
             <!-- Service 2 - Intégration WordPress -->
         <div class="row g-4 g-lg-5">
-            <div class="col-lg-6 wow animate__fadeInUp" data-wow-delay="0.3s">
+            <div class="col-lg-6 " data-wow-delay="0.3s">
               <div class="service-card p-4 p-lg-5 rounded-4 neon-hover-card h-100">
                 <div class="d-flex align-items-start">
                   <div class="service-icon bg-dark-80 rounded-circle flex-shrink-0 me-4">
@@ -916,7 +916,7 @@
 
             
             <!-- Service 2 - Design UX/UI -->
-            <div class="col-lg-6 wow animate__fadeInUp" data-wow-delay="0.3s">
+            <div class="col-lg-6 " data-wow-delay="0.3s">
                 <div class="service-card p-4 p-lg-5 rounded-4 neon-hover-card h-100">
                     <div class="d-flex align-items-start">
                         <div class="service-icon bg-dark-80 rounded-circle flex-shrink-0 me-4">
@@ -954,7 +954,7 @@
             </div>
             
            <!-- Service 3 - Contrôle Qualité Web -->
-            <div class="col-lg-6 wow animate__fadeInUp" data-wow-delay="0.4s">
+            <div class="col-lg-6 " data-wow-delay="0.4s">
               <div class="service-card p-4 p-lg-5 rounded-4 neon-hover-card h-100">
                 <div class="d-flex align-items-start">
                   <div class="service-icon bg-dark-80 rounded-circle flex-shrink-0 me-4">
@@ -992,7 +992,7 @@
             </div>
 
                       <!-- Service 7 - Intégration HTML/CSS -->
-            <div class="col-lg-6 wow animate__fadeInUp" data-wow-delay="0.8s">
+            <div class="col-lg-6 " data-wow-delay="0.8s">
               <div class="service-card p-4 p-lg-5 rounded-4 neon-hover-card h-100">
                 <div class="d-flex align-items-start">
                   <div class="service-icon bg-dark-80 rounded-circle flex-shrink-0 me-4">
@@ -1027,7 +1027,7 @@
         </div>
         
         <!-- CTA supplémentaire -->
-        <div class="text-center mt-5 wow fadeIn" data-wow-delay="0.6s">
+        <div class="text-center mt-5" data-wow-delay="0.6s">
             <div class="rounded-4 p-4 p-lg-5 neon-hover-card">
                 <h3 class="mb-4 text-light">Un projet spécifique ?</h3>
                 <p class="text-light-80 mb-4 mx-auto" style="max-width: 600px;">Que vous ayez besoin d'une solution unique ou d'un accompagnement complet, parlons-en pour trouver la meilleure approche.</p>
@@ -1049,7 +1049,7 @@
  -->    
     <div class="container position-relative z-index-1 py-5">
         <!-- En-tête -->
-        <div class="row align-items-center mb-5 wow animate__fadeInUp" data-wow-delay="0.1s">
+        <div class="row align-items-center mb-5 " data-wow-delay="0.1s">
             <div class="col-md-8">
                 <h2 class="display-5 mb-3">
                     <span class="text-gradient-neon">Mes Réalisations</span>
@@ -1069,7 +1069,7 @@
         <!-- Grille de projets -->
         <div class="row g-4">
             <!-- Projet 1 - Système Hospitalier -->
-            <div class="col-lg-6 portfolio-item management wow animate__fadeInUp" data-wow-delay="0.2s">
+            <div class="col-lg-6 portfolio-item management " data-wow-delay="0.2s">
                 <div class="project-card h-100 rounded-4 overflow-hidden" style="background: rgba(30, 41, 59, 0.6); backdrop-filter: blur(10px); border: 1px solid rgba(0, 210, 255, 0.1);">
                     <div class="project-thumbnail position-relative overflow-hidden">
                         <img src="img/interfaceetsena.JPG" alt="Interface d'e-tsena" class="img-fluid w-100 transition-scale" loading="lazy">
@@ -1112,7 +1112,7 @@
             </div>
 
                         <!-- Projet 3 - Portfolio -->
-                        <div class="col-lg-6 portfolio-item website wow animate__fadeInUp" data-wow-delay="0.4s">
+                        <div class="col-lg-6 portfolio-item website " data-wow-delay="0.4s">
                             <div class="project-card h-100 rounded-4 overflow-hidden" style="background: rgba(30, 41, 59, 0.6); backdrop-filter: blur(10px); border: 1px solid rgba(0, 210, 255, 0.1);">
                                 <div class="project-thumbnail position-relative overflow-hidden">
                                     <img src="img/portfolioimg.JPG" alt="Page d'accueil du portfolio" class="img-fluid w-100 transition-scale" loading="lazy">
@@ -1154,7 +1154,7 @@
                             </div>
                         </div>
 
-            <div class="col-lg-6 portfolio-item website wow animate__fadeInUp" data-wow-delay="0.5s">
+            <div class="col-lg-6 portfolio-item website " data-wow-delay="0.5s">
                 <div class="project-card h-100 rounded-4 overflow-hidden" style="background: rgba(30, 41, 59, 0.6); backdrop-filter: blur(10px); border: 1px solid rgba(0, 210, 255, 0.1);">
                     <div class="project-thumbnail position-relative overflow-hidden">
                         <img src="img/interfaceincomp.JPG" alt="Page d'accueil du site I&N COMPAGNIE" class="img-fluid w-100 transition-scale" loading="lazy">
@@ -1197,7 +1197,7 @@
             </div>
 
             <!-- Projet 1 - Système Hospitalier -->
-            <div class="col-lg-6 portfolio-item management wow animate__fadeInUp" data-wow-delay="0.2s">
+            <div class="col-lg-6 portfolio-item management " data-wow-delay="0.2s">
                 <div class="project-card h-100 rounded-4 overflow-hidden" style="background: rgba(30, 41, 59, 0.6); backdrop-filter: blur(10px); border: 1px solid rgba(0, 210, 255, 0.1);">
                     <div class="project-thumbnail position-relative overflow-hidden">
                         <img src="img/LOGIN.JPG" alt="Interface du système de gestion hospitalière" class="img-fluid w-100 transition-scale" loading="lazy">
@@ -1233,7 +1233,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-6 portfolio-item management wow animate__fadeInUp" data-wow-delay="0.2s">
+            <div class="col-lg-6 portfolio-item management " data-wow-delay="0.2s">
                 <div class="project-card h-100 rounded-4 overflow-hidden" style="background: rgba(30, 41, 59, 0.6); backdrop-filter: blur(10px); border: 1px solid rgba(0, 210, 255, 0.1);">
                     <div class="project-thumbnail position-relative overflow-hidden">
                         <img src="img/imggestionnote.JPG" alt="Interface du système de gestion hospitalière" class="img-fluid w-100 transition-scale" loading="lazy">
@@ -1274,7 +1274,7 @@
         
 
         <!-- CTA -->
-        <div class="text-center mt-5 pt-3 wow fadeIn" data-wow-delay="0.6s">
+        <div class="text-center mt-5 pt-3" data-wow-delay="0.6s">
             <a href="#contact" class="btn btn-primary btn-lg px-5 py-3 btn-neon">
                 <i class="fas fa-paper-plane me-2"></i> Discutons de votre projet
             </a>
@@ -1292,7 +1292,7 @@
     
     <div class="container position-relative z-index-1 py-5">
         <div class="row justify-content-center">
-            <div class="col-lg-10 text-center mb-5 wow animate__fadeInUp" data-wow-delay="0.1s">
+            <div class="col-lg-10 text-center mb-5 " data-wow-delay="0.1s">
                 <h2 class="display-5 mb-3">
                     <span class="text-gradient-neon">Travaillons ensemble</span>
                     <i class="fas fa-paper-plane ms-3 text-primary"></i>
@@ -1303,7 +1303,7 @@
 
         <div class="row g-5 align-items-stretch">
             <!-- Informations de contact -->
-            <div class="col-lg-5 wow animate__fadeInUp" data-wow-delay="0.2s">
+            <div class="col-lg-5 " data-wow-delay="0.2s">
                 <div class="contact-info-card p-4 p-lg-5 rounded-4 h-100" style="background: rgba(30, 41, 59, 0.6); backdrop-filter: blur(10px); border: 1px solid rgba(0, 210, 255, 0.1);">
                     <h3 class="mb-4 text-primary">Coordonnées</h3>
                     
@@ -1365,7 +1365,7 @@
             </div>
 
             <!-- Formulaire de contact -->
-            <div class="col-lg-7 wow animate__fadeInUp" data-wow-delay="0.4s">
+            <div class="col-lg-7 " data-wow-delay="0.4s">
                 <div class="contact-form-card p-4 p-lg-5 rounded-4 h-100" style="background: rgba(30, 41, 59, 0.6); backdrop-filter: blur(10px); border: 1px solid rgba(0, 210, 255, 0.1);">
                     <h3 class="mb-4 text-primary">Envoyez-moi un message</h3>
                     <p class="text-light-80 mb-4">Remplissez ce formulaire et je vous répondrai dans les plus brefs délais</p>
@@ -1453,7 +1453,7 @@
     </div>
 </div>
         <!-- ====== Footer Start ====== -->
-   <footer class="footer position-relative wow animate__fadeInUp" data-wow-delay=".15s" style="background: rgba(30, 41, 59, 0.6); backdrop-filter: blur(10px);">
+   <footer class="footer position-relative " data-wow-delay=".15s" style="background: rgba(30, 41, 59, 0.6); backdrop-filter: blur(10px);">
   <div class="container position-relative py-5">
     <div class="row gy-4">
 
@@ -1572,28 +1572,6 @@ document.querySelector('.current-year').textContent = new Date().getFullYear();
     
 </script>
 
-           
-        <script>
-        // Animation des compétences au scroll
-        document.addEventListener('DOMContentLoaded', function() {
-            const skillLevels = document.querySelectorAll('.skill-level');
-            
-            const animateSkills = () => {
-                skillLevels.forEach(skill => {
-                    const skillPosition = skill.getBoundingClientRect().top;
-                    const screenPosition = window.innerHeight / 1.2;
-                    
-                    if(skillPosition < screenPosition) {
-                        skill.classList.add('in-view');
-                    }
-                });
-            };
-            
-            window.addEventListener('scroll', animateSkills);
-            animateSkills(); // Pour les éléments déjà visibles
-        });
-        </script> 
-
 <script>
 // Mise à jour dynamique de l'année de copyright
 document.querySelector('.current-year').textContent = new Date().getFullYear();
@@ -1697,46 +1675,6 @@ document.querySelector('.current-year').textContent = new Date().getFullYear();
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
 
-    <script>
-        // Animation des barres de compétence
-document.addEventListener('DOMContentLoaded', function() {
-    const skills = document.querySelectorAll('.skill-level');
-    
-    const animateSkills = () => {
-        skills.forEach(skill => {
-            const skillPosition = skill.getBoundingClientRect().top;
-            const screenPosition = window.innerHeight / 1.2;
-            
-            if(skillPosition < screenPosition) {
-                skill.style.width = skill.getAttribute('data-level') + '%';
-            }
-        });
-    };
-    
-    // Désactiver l'animation initiale
-    skills.forEach(skill => {
-        skill.style.width = '0';
-    });
-    
-    // Lancer l'animation
-    window.addEventListener('scroll', animateSkills);
-    animateSkills(); // Pour les éléments déjà visibles
-});   
-    </script>
-    <script>
-// Vérification du chargement des éléments
-document.addEventListener('DOMContentLoaded', function() {
-    console.log('Compétences chargées');
-    if(typeof Wow === 'undefined') {
-        console.error('Wow.js non chargé');
-    }
-    if(typeof $ === 'undefined') {
-        console.error('jQuery non chargé');
-    }
-});
-</script>
-
-
 <script>
     // Ajoutez ce script à votre page pour garantir que le filtre s'initialise correctement après le chargement complet
 $(document).ready(function() {
@@ -1761,13 +1699,11 @@ $(document).ready(function() {
 });
 </script>
         
-        
-        
-    
-    <!-- WOW.js CDN -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
-    <script>
-        new WOW().init();
-    </script>
+        <!-- JS AOS -->
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+
 </body>
 </html>
