@@ -27,13 +27,13 @@
         <link href="css/style.css" rel="stylesheet">
     </head>
 
-    <body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="51">
+        <body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="51">
 
         <div id="spinner" class="show bg-dark position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
             <img src="img/Logo.svg" class="animate-logo" alt="Logo de chargement" style="width: 100px; height: 100px;">
         </div>
 
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top py-2 wow fadeIn" data-wow-delay="0.1s">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top py-2>
         <div class="container">
         <!-- Logo centré -->
         <a href="#accueil" class="navbar-brand mx-auto mx-lg-0 scaleanim">
@@ -73,66 +73,65 @@
     </div>
 </nav>
 
-
-
     <header class="header position-relative overflow-hidden" id="accueil">
-        <!-- Fond animé avec effets neon subtils -->
-        <div class="hero-neon-overlay">
-            <div class="neon-circle circle-1"></div>
+    <!-- Fond animé avec effets neon subtils -->
+    <div class="hero-neon-overlay">
+        <div class="neon-circle circle-1"></div>
+        <div class="neon-circle circle-3"></div>
+        <div class="neon-grid-overlay"></div>
+    </div>
 
-            <div class="neon-circle circle-3"></div>
-            <div class="neon-grid-overlay"></div>
-        </div>
-        
-        <div class="container position-relative z-index-1">
-            <div class="row align-items-center min-vh-80">
-                <!-- Colonne texte -->
-                <div class="col-lg-7 text-center text-lg-start mb-lg-0">
-                    <div>
-                        <h1 class="hero-title">
-                            <span class="text-light">Développeur web</span>
-                            <span class="text-gradient-neon">moderne & fiable</span>
-                        </h1>
-                        <div class="neon-underline" style="width: 200px;"></div>
-                    </div>
-                    
-                    <p class="hero-subtitle">
-                        J’aide les entreprises à se démarquer en ligne grâce à des sites performants, responsives et conçus pour le référencement naturel. Offrez à vos utilisateurs une expérience unique, rapide et engageante.
-                    </p>
-                    
-                    <div class="hero-buttons">
-                        <a href="#contact" class="btn btn-primary btn-lg px-4 py-3 rounded-pill btn-neon">
-                            <i class="fas fa-paper-plane me-2"></i> Discutons projet
-                        </a>
-                        <a href="#projets" class="btn btn-outline-primary btn-lg px-4 py-3 btn-neon-outline">
-                            <i class="fas fa-code me-2"></i> Voir mes réalisations
-                        </a>
-                    </div>
+    <div class="container position-relative z-index-1">
+        <div class="row align-items-center min-vh-80">
+            <!-- Colonne texte -->
+            <div class="col-lg-7 text-center text-lg-start mb-lg-0" data-aos="fade-right" data-aos-delay="100" data-aos-duration="800">
+                <div>
+                    <h1 class="hero-title" data-aos="fade-down" data-aos-delay="200">
+                        <span class="text-light">Développeur web</span>
+                        <span class="text-gradient-neon">moderne & fiable</span>
+                    </h1>
+                    <div class="neon-underline" style="width: 200px;" data-aos="zoom-in" data-aos-delay="300"></div>
                 </div>
-                
-                <!-- Nouveau design de présentation -->
-                <div class="col-lg-5 d-lg-block" id="cacher">
-                    <div class="presentation-container">
-                        <div class="neon-avatar-orbit-container">
-                            <img src="img/avatar.png" alt="Développeur Full Stack - Besedev" class="neon-avatar">
 
-    <!-- Icônes satellites -->
-                <div class="orbit">
-                    <i class="fas fa-code orbit-icon" aria-label="Code"></i>
-                    <i class="fab fa-html5 orbit-icon" aria-label="HTML5"></i>
-                    <i class="fab fa-css3-alt orbit-icon" aria-label="CSS3"></i>
-                    <i class="fab fa-bootstrap orbit-icon" aria-label="Bootstrap"></i>
-                    <i class="fab fa-react orbit-icon" aria-label="React"></i>
-                    <i class="fab fa-laravel orbit-icon" aria-label="Laravel"></i>
-                    <i class="fab fa-php orbit-icon" aria-label="PHP"></i>
-                    <i class="fab fa-wordpress orbit-icon" aria-label="WordPress"></i>
+                <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="400">
+                    J’aide les entreprises à se démarquer en ligne grâce à des sites performants, responsives et conçus pour le référencement naturel.
+                    Offrez à vos utilisateurs une expérience unique, rapide et engageante.
+                </p>
+
+                <div class="hero-buttons" data-aos="fade-up" data-aos-delay="500">
+                    <a href="#contact" class="btn btn-primary btn-lg px-4 py-3 rounded-pill btn-neon">
+                        <i class="fas fa-paper-plane me-2"></i> Discutons projet
+                    </a>
+                    <a href="#projets" class="btn btn-outline-primary btn-lg px-4 py-3 btn-neon-outline">
+                        <i class="fas fa-code me-2"></i> Voir mes réalisations
+                    </a>
                 </div>
+            </div>
+
+            <!-- Image développeur -->
+            <div class="col-lg-5 d-lg-block" id="cacher" data-aos="zoom-in" data-aos-delay="600">
+                <div class="presentation-container">
+                    <div class="neon-avatar-orbit-container">
+                        <img src="img/avatar.png" alt="Développeur Full Stack - Besedev" class="neon-avatar">
+
+                        <!-- Icônes satellites -->
+                        <div class="orbit">
+                            <i class="fas fa-code orbit-icon" aria-label="Code"></i>
+                            <i class="fab fa-html5 orbit-icon" aria-label="HTML5"></i>
+                            <i class="fab fa-css3-alt orbit-icon" aria-label="CSS3"></i>
+                            <i class="fab fa-bootstrap orbit-icon" aria-label="Bootstrap"></i>
+                            <i class="fab fa-react orbit-icon" aria-label="React"></i>
+                            <i class="fab fa-laravel orbit-icon" aria-label="Laravel"></i>
+                            <i class="fab fa-php orbit-icon" aria-label="PHP"></i>
+                            <i class="fab fa-wordpress orbit-icon" aria-label="WordPress"></i>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </header>
+    </div>
+</header>
+
 
 <div class="neon-divider"></div>
         
@@ -145,7 +144,7 @@
 
     <div class="container position-relative z-index-1">
         <!-- Titre + Bouton -->
-        <div class="row mb-5 wow fadeInUp">
+        <div class="row mb-5" data-aos="zoom-in">
             <div class="col-12">
                 <div class="d-flex flex-column flex-md-row justify-content-between align-items-center">
                     <h2 class="display-5 mb-3 mb-md-0">
@@ -156,14 +155,13 @@
                         <i class="fas fa-calendar-check me-2"></i> Disponible pour des missions
                     </a>
                 </div>
-                
             </div>
         </div>
 
         <!-- Contenu -->
         <div class="row g-4 g-lg-5">
             <!-- Colonne Qui suis-je -->
-            <div class="col-lg-6 wow fadeInLeft">
+            <div class="col-lg-6" data-aos="fade-right" data-aos-delay="100">
                 <div class="about-card p-4 p-lg-5 rounded-4 neon-hover-card h-100">
                     <h3 class="mb-4 text-gradient-neon">Qui suis-je ?</h3>
                     <div class="d-flex mb-4 align-items-start">
@@ -181,15 +179,15 @@
                     </p>
                     
                     <div class="feature-list">
-                        <div class="feature-item d-flex align-items-center mb-3">
+                        <div class="feature-item d-flex align-items-center mb-3" data-aos="fade-up" data-aos-delay="150">
                             <i class="fas fa-check-circle text-success me-3"></i>
                             <span class="text-light">+3 ans d'expérience en développement</span>
                         </div>
-                        <div class="feature-item d-flex align-items-center mb-3">
+                        <div class="feature-item d-flex align-items-center mb-3" data-aos="fade-up" data-aos-delay="200">
                             <i class="fas fa-check-circle text-success me-3"></i>
                             <span class="text-light">15+ projets réalisés</span>
                         </div>
-                        <div class="feature-item d-flex align-items-center">
+                        <div class="feature-item d-flex align-items-center" data-aos="fade-up" data-aos-delay="250">
                             <i class="fas fa-check-circle text-success me-3"></i>
                             <span class="text-light">Approche centrée sur les résultats clients</span>
                         </div>
@@ -198,11 +196,11 @@
             </div>
 
             <!-- Colonne Approche -->
-            <div class="col-lg-6 wow fadeInRight animation-name: fadeInRight;">
+            <div class="col-lg-6" data-aos="fade-left" data-aos-delay="200">
                 <div class="about-card p-4 p-lg-5 rounded-4 neon-hover-card h-100">
                     <h3 class="mb-4 text-gradient-neon">Mon Approche</h3>
                     
-                    <div class="approach-item d-flex mb-4">
+                    <div class="approach-item d-flex mb-4" data-aos="fade-up" data-aos-delay="250">
                         <div class="approach-icon bg-dark-80 rounded-circle flex-shrink-0 me-4">
                             <i class="fas fa-lightbulb text-primary fa-lg"></i>
                         </div>
@@ -212,7 +210,7 @@
                         </div>
                     </div>
                     
-                    <div class="approach-item d-flex mb-4">
+                    <div class="approach-item d-flex mb-4" data-aos="fade-up" data-aos-delay="300">
                         <div class="approach-icon bg-dark-80 rounded-circle flex-shrink-0 me-4">
                             <i class="fas fa-code text-primary fa-lg"></i>
                         </div>
@@ -222,7 +220,7 @@
                         </div>
                     </div>
                     
-                    <div class="approach-item d-flex">
+                    <div class="approach-item d-flex" data-aos="fade-up" data-aos-delay="350">
                         <div class="approach-icon bg-dark-80 rounded-circle flex-shrink-0 me-4">
                             <i class="fas fa-handshake text-primary fa-lg"></i>
                         </div>
@@ -247,7 +245,7 @@
 
     <div class="container position-relative z-index-1">
         <!-- En-tête -->
-        <div class="row align-items-center mb-5 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="row align-items-center mb-5" data-aos="fade-up">
             <div class="col-md-8">
                 <h2 class="display-5 mb-3">
                     <span class="text-gradient-neon">Expertise Technique</span>
@@ -255,7 +253,7 @@
                 </h2>
                 <p class="lead text-muted">Maîtrise des technologies clés pour des solutions web performantes</p>
             </div>
-            <div class="col-md-4 text-md-end">
+            <div class="col-md-4 text-md-end" data-aos="fade-left" data-aos-delay="200">
                 <a href="#contact" class="btn btn-outline-primary btn-lg px-4 py-3 btn-neon-outline">
                     <i class="fas fa-handshake me-2"></i> Discutons votre projet
                 </a>
@@ -266,7 +264,7 @@
         <!-- Grille de compétences -->
         <div class="row g-4 g-lg-5">
             <!-- Frontend -->
-            <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.2s">
+            <div class="col-lg-4" data-aos="fade-right" data-aos-delay="100">
                 <div class="skill-category p-4 p-lg-5 rounded-4 neon-hover-card h-100">
                     <div class="category-header d-flex align-items-center mb-4">
                         <div class="icon-box bg-dark-80 rounded-circle flex-shrink-0 me-3">
@@ -340,7 +338,7 @@
             </div>
 
             <!-- Backend -->
-            <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
+            <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
                 <div class="skill-category p-4 p-lg-5 rounded-4 neon-hover-card h-100">
                     <div class="category-header d-flex align-items-center mb-4">
                         <div class="icon-box bg-dark-80 rounded-circle flex-shrink-0 me-3">
@@ -405,7 +403,7 @@
             </div>
 
             <!-- Outils & CMS -->
-            <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.4s">
+            <div class="col-lg-4" data-aos="fade-left" data-aos-delay="300">
                 <div class="skill-category p-4 p-lg-5 rounded-4 neon-hover-card h-100">
                     <div class="category-header d-flex align-items-center mb-4">
                         <div class="icon-box bg-dark-80 rounded-circle flex-shrink-0 me-3">
@@ -501,7 +499,7 @@
     
     <div class="container position-relative z-index-1">
         <!-- En-tête -->
-        <div class="row align-items-center mb-5 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="row align-items-center mb-5" data-aos="fade-up">
             <div class="col-md-8">
                 <h2 class="display-5 mb-3">
                     <span class="text-gradient-neon">Mon Parcours</span>
@@ -542,7 +540,7 @@
                         <div id="formations" class="tab-pane fade show active" role="tabpanel">
                             <div class="row g-4">
                                 <!-- Formation 1 -->
-                                <div class="col-md-6 wow fadeInUp" data-wow-delay="0.4s">
+                                <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
                                     <div class="service-card neon-hover-car p-4 p-lg-5 rounded-4 h-100" style="background: rgba(30, 41, 59, 0.6); backdrop-filter: blur(10px); border: 1px solid rgba(0, 210, 255, 0.1);">
                                         <div class="d-flex align-items-start">
                                             <div class="education-icon bg-primary-20 rounded-3 d-flex align-items-center justify-content-center me-4" style="width: 60px; height: 60px;">
@@ -568,7 +566,7 @@
 
                                 
                                 <!-- Formation 2 -->
-                                <div class="col-md-6 wow fadeInUp" data-wow-delay="0.4s">
+                                <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
                                     <div class="service-card neon-hover-car p-4 p-lg-5 rounded-4 h-100" style="background: rgba(30, 41, 59, 0.6); backdrop-filter: blur(10px); border: 1px solid rgba(0, 210, 255, 0.1);">
                                         <div class="d-flex align-items-start">
                                             <div class="education-icon bg-primary-20 rounded-3 d-flex align-items-center justify-content-center me-4" style="width: 60px; height: 60px;">
@@ -595,7 +593,7 @@
 
                                 
                                 <!-- Formation 3 -->
-                                <div class="col-md-6 wow fadeInUp" data-wow-delay="0.4s">
+                                <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
                                     <div class="service-card neon-hover-car p-4 p-lg-5 rounded-4 h-100" style="background: rgba(30, 41, 59, 0.6); backdrop-filter: blur(10px); border: 1px solid rgba(0, 210, 255, 0.1);">
                                         <div class="d-flex align-items-start">
                                             <div class="education-icon bg-primary-20 rounded-3 d-flex align-items-center justify-content-center me-4" style="width: 60px; height: 60px;">
@@ -618,7 +616,7 @@
                                     </div>
                                 </div>
 
-                                <div class="col-md-6 wow fadeInUp" data-wow-delay="0.4s">
+                                <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
                                     <div class="service-card neon-hover-car p-4 p-lg-5 rounded-4 h-100" style="background: rgba(30, 41, 59, 0.6); backdrop-filter: blur(10px); border: 1px solid rgba(0, 210, 255, 0.1);">
                                         <div class="d-flex align-items-start">
                                             <div class="education-icon bg-primary-20 rounded-3 d-flex align-items-center justify-content-center me-4" style="width: 60px; height: 60px;">
@@ -641,7 +639,7 @@
                                     </div>
                                 </div>
 
-                                <div class="col-md-6 wow fadeInUp" data-wow-delay="0.4s">
+                                <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
                                     <div class="service-card neon-hover-car p-4 p-lg-5 rounded-4 h-100" style="background: rgba(30, 41, 59, 0.6); backdrop-filter: blur(10px); border: 1px solid rgba(0, 210, 255, 0.1);">
                                         <div class="d-flex align-items-start">
                                             <div class="education-icon bg-primary-20 rounded-3 d-flex align-items-center justify-content-center me-4" style="width: 60px; height: 60px;">
@@ -664,7 +662,7 @@
                                     </div>
                                 </div>
 
-                                <div class="col-md-6 wow fadeInUp" data-wow-delay="0.4s">
+                                <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
                                     <div class="service-card neon-hover-car p-4 p-lg-5 rounded-4 h-100" style="background: rgba(30, 41, 59, 0.6); backdrop-filter: blur(10px); border: 1px solid rgba(0, 210, 255, 0.1);">
                                         <div class="d-flex align-items-start">
                                             <div class="education-icon bg-primary-20 rounded-3 d-flex align-items-center justify-content-center me-4" style="width: 60px; height: 60px;">
@@ -688,7 +686,7 @@
                                     </div>
                                 </div>
 
-                                <div class="col-md-6 wow fadeInUp" data-wow-delay="0.4s">
+                                <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
                                     <div class="service-card neon-hover-car p-4 p-lg-5 rounded-4 h-100" style="background: rgba(30, 41, 59, 0.6); backdrop-filter: blur(10px); border: 1px solid rgba(0, 210, 255, 0.1);">
                                         <div class="d-flex align-items-start">
                                             <div class="education-icon bg-primary-20 rounded-3 d-flex align-items-center justify-content-center me-4" style="width: 60px; height: 60px;">
@@ -713,7 +711,7 @@
                                     </div>
                                 </div>
 
-                                <div class="col-md-6 wow fadeInUp" data-wow-delay="0.4s">
+                                <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
                                     <div class="service-card neon-hover-car p-4 p-lg-5 rounded-4 h-100" style="background: rgba(30, 41, 59, 0.6); backdrop-filter: blur(10px); border: 1px solid rgba(0, 210, 255, 0.1);">
                                         <div class="d-flex align-items-start">
                                             <div class="education-icon bg-primary-20 rounded-3 d-flex align-items-center justify-content-center me-4" style="width: 60px; height: 60px;">
@@ -738,7 +736,7 @@
                                     </div>
                                 </div>
 
-                                <div class="col-md-6 wow fadeInUp" data-wow-delay="0.4s">
+                                <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
                                     <div class="service-card neon-hover-car p-4 p-lg-5 rounded-4 h-100" style="background: rgba(30, 41, 59, 0.6); backdrop-filter: blur(10px); border: 1px solid rgba(0, 210, 255, 0.1);">
                                         <div class="d-flex align-items-start">
                                             <div class="education-icon bg-primary-20 rounded-3 d-flex align-items-center justify-content-center me-4" style="width: 60px; height: 60px;">
@@ -762,7 +760,7 @@
                                     </div>
                                 </div>
 
-                                <div class="col-md-6 wow fadeInUp" data-wow-delay="0.4s">
+                                <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
                                     <div class="service-card neon-hover-car p-4 p-lg-5 rounded-4 h-100" style="background: rgba(30, 41, 59, 0.6); backdrop-filter: blur(10px); border: 1px solid rgba(0, 210, 255, 0.1);">
                                         <div class="d-flex align-items-start">
                                             <div class="education-icon bg-primary-20 rounded-3 d-flex align-items-center justify-content-center me-4" style="width: 60px; height: 60px;">
@@ -796,10 +794,10 @@
                         </div>
                         
                         <!-- Diplômes -->
-                        <div id="diplomes" class="tab-pane fade" role="tabpanel">
+                        <div id="diplomes" class="tab-pane fade show active" role="tabpanel">
                             <div class="row g-4">
                                 <!-- Diplôme 1 -->
-                                <div class="col-md-6 wow fadeInUp" data-wow-delay="0.2s">
+                                <div class="col-md-6">
                                     <div class="service-card neon-hover-car p-4 p-lg-5 rounded-4 h-100" style="background: rgba(30, 41, 59, 0.6); backdrop-filter: blur(10px); border: 1px solid rgba(0, 210, 255, 0.1);">
                                         <div class="d-flex align-items-start">
                                             <div class="education-icon bg-primary-20 rounded-3 d-flex align-items-center justify-content-center me-4" style="width: 60px; height: 60px;">
@@ -818,7 +816,7 @@
                                 </div>
                                 
                                 <!-- Diplôme 2 -->
-                                <div class="col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                                <div class="col-md-6">
                                     <div class="service-card neon-hover-car p-4 p-lg-5 rounded-4 h-100" style="background: rgba(30, 41, 59, 0.6); backdrop-filter: blur(10px); border: 1px solid rgba(0, 210, 255, 0.1);">
                                         <div class="d-flex align-items-start">
                                             <div class="education-icon bg-primary-20 rounded-3 d-flex align-items-center justify-content-center me-4" style="width: 60px; height: 60px;">
@@ -849,7 +847,7 @@
 </div>
 
         <div class="neon-divider my-4"></div>
-        <section class="services-section position-relative py-5" id="services">
+<section class="services-section position-relative py-5" id="services">
     <!-- Effets neon subtils en arrière-plan -->
     <div class="position-absolute w-100 h-100 top-0 start-0 overflow-hidden" aria-hidden="true">
         <div class="neon-circle circle-1" style="top: 10%; right: 5%; width: 200px; height: 200px; background: rgba(255, 0, 170, 0.03);"></div>
@@ -858,7 +856,7 @@
 
     <div class="container position-relative z-index-1">
         <!-- En-tête -->
-        <div class="row align-items-center mb-5 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="row align-items-center mb-5" data-aos="fade-up">
             <div class="col-md-8">
                 <h2 class="display-5 mb-3">
                     <span class="text-gradient-neon">Mes Services</span>
@@ -875,9 +873,9 @@
         
 
         <!-- Grille de services -->
-            <!-- Service 2 - Intégration WordPress -->
+            <!-- Service 1 - Intégration WordPress -->
         <div class="row g-4 g-lg-5">
-            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
+            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
               <div class="service-card p-4 p-lg-5 rounded-4 neon-hover-card h-100">
                 <div class="d-flex align-items-start">
                   <div class="service-icon bg-dark-80 rounded-circle flex-shrink-0 me-4">
@@ -916,7 +914,7 @@
 
             
             <!-- Service 2 - Design UX/UI -->
-            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
+            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
                 <div class="service-card p-4 p-lg-5 rounded-4 neon-hover-card h-100">
                     <div class="d-flex align-items-start">
                         <div class="service-icon bg-dark-80 rounded-circle flex-shrink-0 me-4">
@@ -954,7 +952,7 @@
             </div>
             
            <!-- Service 3 - Contrôle Qualité Web -->
-            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.4s">
+            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
               <div class="service-card p-4 p-lg-5 rounded-4 neon-hover-card h-100">
                 <div class="d-flex align-items-start">
                   <div class="service-icon bg-dark-80 rounded-circle flex-shrink-0 me-4">
@@ -991,8 +989,8 @@
               </div>
             </div>
 
-                      <!-- Service 7 - Intégration HTML/CSS -->
-            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.8s">
+                      <!-- Service 4 - Intégration HTML/CSS -->
+            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="400">
               <div class="service-card p-4 p-lg-5 rounded-4 neon-hover-card h-100">
                 <div class="d-flex align-items-start">
                   <div class="service-icon bg-dark-80 rounded-circle flex-shrink-0 me-4">
@@ -1027,7 +1025,7 @@
         </div>
         
         <!-- CTA supplémentaire -->
-        <div class="text-center mt-5 wow fadeIn" data-wow-delay="0.6s">
+        <div class="text-center mt-5" data-aos="zoom-in" data-aos-delay="500">
             <div class="rounded-4 p-4 p-lg-5 neon-hover-card">
                 <h3 class="mb-4 text-light">Un projet spécifique ?</h3>
                 <p class="text-light-80 mb-4 mx-auto" style="max-width: 600px;">Que vous ayez besoin d'une solution unique ou d'un accompagnement complet, parlons-en pour trouver la meilleure approche.</p>
@@ -1049,7 +1047,7 @@
  -->    
     <div class="container position-relative z-index-1 py-5">
         <!-- En-tête -->
-        <div class="row align-items-center mb-5 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="row align-items-center mb-5" data-aos="fade-up">
             <div class="col-md-8">
                 <h2 class="display-5 mb-3">
                     <span class="text-gradient-neon">Mes Réalisations</span>
@@ -1069,7 +1067,7 @@
         <!-- Grille de projets -->
         <div class="row g-4">
             <!-- Projet 1 - Système Hospitalier -->
-            <div class="col-lg-6 portfolio-item management wow fadeInUp" data-wow-delay="0.2s">
+            <div class="col-lg-6 portfolio-item management" data-aos="fade-up" data-aos-delay="100">
                 <div class="project-card h-100 rounded-4 overflow-hidden" style="background: rgba(30, 41, 59, 0.6); backdrop-filter: blur(10px); border: 1px solid rgba(0, 210, 255, 0.1);">
                     <div class="project-thumbnail position-relative overflow-hidden">
                         <img src="img/interfaceetsena.JPG" alt="Interface d'e-tsena" class="img-fluid w-100 transition-scale" loading="lazy">
@@ -1112,7 +1110,8 @@
             </div>
 
                         <!-- Projet 3 - Portfolio -->
-                        <div class="col-lg-6 portfolio-item website wow fadeInUp" data-wow-delay="0.4s">
+                       <div class="col-lg-6 portfolio-item management" data-aos="fade-up" data-aos-delay="200">
+
                             <div class="project-card h-100 rounded-4 overflow-hidden" style="background: rgba(30, 41, 59, 0.6); backdrop-filter: blur(10px); border: 1px solid rgba(0, 210, 255, 0.1);">
                                 <div class="project-thumbnail position-relative overflow-hidden">
                                     <img src="img/portfolioimg.JPG" alt="Page d'accueil du portfolio" class="img-fluid w-100 transition-scale" loading="lazy">
@@ -1154,7 +1153,8 @@
                             </div>
                         </div>
 
-            <div class="col-lg-6 portfolio-item website wow fadeInUp" data-wow-delay="0.5s">
+            <div class="col-lg-6 portfolio-item management" data-aos="fade-up" data-aos-delay="300">
+
                 <div class="project-card h-100 rounded-4 overflow-hidden" style="background: rgba(30, 41, 59, 0.6); backdrop-filter: blur(10px); border: 1px solid rgba(0, 210, 255, 0.1);">
                     <div class="project-thumbnail position-relative overflow-hidden">
                         <img src="img/interfaceincomp.JPG" alt="Page d'accueil du site I&N COMPAGNIE" class="img-fluid w-100 transition-scale" loading="lazy">
@@ -1197,7 +1197,7 @@
             </div>
 
             <!-- Projet 1 - Système Hospitalier -->
-            <div class="col-lg-6 portfolio-item management wow fadeInUp" data-wow-delay="0.2s">
+            <div class="col-lg-6 portfolio-item management" data-aos="fade-up" data-aos-delay="400">
                 <div class="project-card h-100 rounded-4 overflow-hidden" style="background: rgba(30, 41, 59, 0.6); backdrop-filter: blur(10px); border: 1px solid rgba(0, 210, 255, 0.1);">
                     <div class="project-thumbnail position-relative overflow-hidden">
                         <img src="img/LOGIN.JPG" alt="Interface du système de gestion hospitalière" class="img-fluid w-100 transition-scale" loading="lazy">
@@ -1233,7 +1233,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-6 portfolio-item management wow fadeInUp" data-wow-delay="0.2s">
+            <div class="col-lg-6 portfolio-item management" data-aos="fade-up" data-aos-delay="500">
                 <div class="project-card h-100 rounded-4 overflow-hidden" style="background: rgba(30, 41, 59, 0.6); backdrop-filter: blur(10px); border: 1px solid rgba(0, 210, 255, 0.1);">
                     <div class="project-thumbnail position-relative overflow-hidden">
                         <img src="img/imggestionnote.JPG" alt="Interface du système de gestion hospitalière" class="img-fluid w-100 transition-scale" loading="lazy">
@@ -1274,7 +1274,7 @@
         
 
         <!-- CTA -->
-        <div class="text-center mt-5 pt-3 wow fadeIn" data-wow-delay="0.6s">
+        <div class="text-center mt-5 pt-3" data-aos="zoom-in" data-aos-delay="600">
             <a href="#contact" class="btn btn-primary btn-lg px-5 py-3 btn-neon">
                 <i class="fas fa-paper-plane me-2"></i> Discutons de votre projet
             </a>
@@ -1284,7 +1284,7 @@
 
 <div class="neon-divider my-4"></div>
 
-<div class="container-fluid dark-contact position-relative overflow-hidden" id="contact"projet>
+<div class="container-fluid dark-contact position-relative overflow-hidden" id="contact">
     <!-- Effets d'arrière-plan -->
     <div class="contact-neon-overlay">
         <!-- <div class="neon-circle circle-6"></div> -->
@@ -1292,7 +1292,7 @@
     
     <div class="container position-relative z-index-1 py-5">
         <div class="row justify-content-center">
-            <div class="col-lg-10 text-center mb-5 wow fadeInUp" data-wow-delay="0.1s">
+            <div class="col-lg-10 text-center mb-5" data-aos="fade-up">
                 <h2 class="display-5 mb-3">
                     <span class="text-gradient-neon">Travaillons ensemble</span>
                     <i class="fas fa-paper-plane ms-3 text-primary"></i>
@@ -1303,7 +1303,7 @@
 
         <div class="row g-5 align-items-stretch">
             <!-- Informations de contact -->
-            <div class="col-lg-5 wow fadeInUp" data-wow-delay="0.2s">
+            <div class="col-lg-5" data-aos="fade-right" data-aos-delay="100">
                 <div class="contact-info-card p-4 p-lg-5 rounded-4 h-100" style="background: rgba(30, 41, 59, 0.6); backdrop-filter: blur(10px); border: 1px solid rgba(0, 210, 255, 0.1);">
                     <h3 class="mb-4 text-primary">Coordonnées</h3>
                     
@@ -1365,7 +1365,7 @@
             </div>
 
             <!-- Formulaire de contact -->
-            <div class="col-lg-7 wow fadeInUp" data-wow-delay="0.4s">
+            <div class="col-lg-7" data-aos="fade-left" data-aos-delay="200">
                 <div class="contact-form-card p-4 p-lg-5 rounded-4 h-100" style="background: rgba(30, 41, 59, 0.6); backdrop-filter: blur(10px); border: 1px solid rgba(0, 210, 255, 0.1);">
                     <h3 class="mb-4 text-primary">Envoyez-moi un message</h3>
                     <p class="text-light-80 mb-4">Remplissez ce formulaire et je vous répondrai dans les plus brefs délais</p>
@@ -1441,7 +1441,7 @@
 </div>
 
 <!-- Notification de succès -->
-<div id="formSuccess" class="toast-container position-fixed top-20 end-0 p-3">
+<div id="formSuccess" class="toast-container position-fixed top-20 end-0 p-3" data-aos="fade-in" data-aos-delay="300">
     <div class="toast align-items-center text-white bg-success border-0" role="alert" aria-live="assertive" aria-atomic="true">
         <div class="d-flex">
             <div class="toast-body">
@@ -1453,7 +1453,7 @@
     </div>
 </div>
         <!-- ====== Footer Start ====== -->
-   <footer class="footer position-relative wow fadeInUp" data-wow-delay=".15s" style="background: rgba(30, 41, 59, 0.6); backdrop-filter: blur(10px);">
+   <footer class="footer position-relative " style="background: rgba(30, 41, 59, 0.6); backdrop-filter: blur(10px);">
   <div class="container position-relative py-5">
     <div class="row gy-4">
 
