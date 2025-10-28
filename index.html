@@ -1441,7 +1441,6 @@
     </div>
 </div>
 
-        <button id="backToTop" title="Retour en haut">↑</button>
 
 <!-- Notification de succès -->
 <div id="formSuccess" class="toast-container position-fixed top-20 end-0 p-3" data-aos="fade-in" data-aos-delay="300">
@@ -1546,35 +1545,70 @@
   </div>
 </footer>
 
+        <!-- Back to Top - place this once before </body> -->
+<style>
+  /* If you prefer, déplacez ceci dans css/style.css */
+  #backToTop {
+    display: none;
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    z-index: 9999;
+    background-color: #0d6efd;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 22px;
+    cursor: pointer;
+    box-shadow: 0 6px 18px rgba(2,6,23,0.45);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform .18s ease, opacity .18s ease;
+  }
+  #backToTop:hover { transform: translateY(-3px) scale(1.06); }
+</style>
+
+<button id="backToTop" aria-label="Retour en haut" title="Retour en haut">↑</button>
+
+<script>
+  // Attendre le chargement complet pour s'assurer que le bouton est dans le DOM
+  document.addEventListener('DOMContentLoaded', function () {
+    const backToTopButton = document.getElementById('backToTop');
+    if(!backToTopButton) return; // sécurité
+
+    // Afficher/cacher selon la position de scroll
+    const toggleVisibility = () => {
+      if (window.scrollY > 300) {
+        backToTopButton.style.display = 'flex';
+        backToTopButton.style.opacity = '1';
+      } else {
+        backToTopButton.style.opacity = '0';
+        // petite temporisation pour laisser l'animation finir avant de display none
+        setTimeout(() => {
+          if (window.scrollY <= 300) backToTopButton.style.display = 'none';
+        }, 180);
+      }
+    };
+
+    window.addEventListener('scroll', toggleVisibility);
+    toggleVisibility(); // état initial
+
+    // Scroll smooth vers le haut
+    backToTopButton.addEventListener('click', function (e) {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  });
+</script>
+
 <script>
 // Mise à jour dynamique de l'année de copyright
 document.querySelector('.current-year').textContent = new Date().getFullYear();
-
-<script>
- <script>
-  const backToTopButton = document.getElementById("backToTop");
-
-  // Afficher le bouton au scroll
-  window.addEventListener("scroll", function () {
-    if (window.scrollY > 300) {
-      backToTopButton.style.display = "block";
-    } else {
-      backToTopButton.style.display = "none";
-    }
-  });
-
-  // Scroll 
-  backToTopButton.addEventListener("click", function (e) {
-    e.preventDefault();
-    window.scrollTo(0, 0); 
-  });
-</script>
-
-</script>
-
     
 </script>
-
            
         <script>
         // Animation des compétences au scroll
