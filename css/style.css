@@ -2996,5 +2996,27 @@ html, body {
   }
 }
 
+  #backToTop {
+      display: none; /* caché par défaut */
+      position: fixed;
+      bottom: 25px; /* distance du bas de la page */
+      right: 25px;  /* distance du bord droit */
+      z-index: 9999; /* au-dessus de tous les éléments */
+      background-color: #0d6efd; /* bleu moderne */
+      color: #fff;
+      border: none;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      font-size: 22px;
+      font-weight: bold;
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
 
 
