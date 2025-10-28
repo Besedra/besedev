@@ -2997,7 +2997,7 @@ html, body {
 }
 
   #backToTop {
-      display: none; /* caché par défaut */
+       /* caché par défaut */
       position: fixed;
       bottom: 25px; /* distance du bas de la page */
       right: 25px;  /* distance du bord droit */
