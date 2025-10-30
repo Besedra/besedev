@@ -324,10 +324,20 @@
                             </div>
                             <div class="skill-level" data-level="40" aria-label="Niveau de compétence en React.js: 40%"></div>
                         </li>
-                                                <li class="skill-item">
+                        <li class="skill-item">
                             <div class="skill-info d-flex justify-content-between mb-2">
                                 <div class="d-flex align-items-center">
                                     <i class="fab fa-vuejs text-danger me-3"></i>
+                                    <span class="text-light">Vue.js</span>
+                                </div>
+                                <span class="text-primary">40%</span>
+                            </div>
+                            <div class="skill-level" data-level="40" aria-label="Niveau de compétence en React.js: 45%"></div>
+                        </li>
+                        <li class="skill-item">
+                            <div class="skill-info d-flex justify-content-between mb-2">
+                                <div class="d-flex align-items-center">
+                                    <i class="fab fa-flutter text-info me-3"></i>
                                     <span class="text-light">Vue.js</span>
                                 </div>
                                 <span class="text-primary">40%</span>
