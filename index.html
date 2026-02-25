@@ -1489,18 +1489,16 @@ $(document).ready(function() {
 		showWelcomeScreen: true
 	});
 </script> -->
-		<div class="chat-wrapper">
+		<!-- CHAT WIDGET SIMPLE -->
+<div class="chat-wrapper">
   <div class="chat-header">
-    <img src="https://i.imgur.com/7k12EPD.png" class="avatar">
-    <div>
-      <h4>Besedev Assistant</h4>
-      <span>En ligne</span>
-    </div>
+    <img src="assets/bot.png" class="avatar">
+    <h4>Besedev Assistant</h4>
   </div>
 
   <div class="chat-messages" id="messages">
     <div class="message bot">
-      <img src="https://i.imgur.com/7k12EPD.png" class="msg-avatar">
+      <img src="assets/bot.png" class="msg-avatar">
       <div class="bubble">
         Bonjour 👋<br>
         Je suis l'assistant Besedev. Comment puis-je vous aider ?
@@ -1520,6 +1518,8 @@ $(document).ready(function() {
     <button onclick="sendMessage()">Envoyer</button>
   </div>
 </div>
+
+<script src="chat.js"></script>
 		<script>
 			document.addEventListener("DOMContentLoaded", function () {
   async function sendMessage() {
@@ -1552,7 +1552,7 @@ function sendMessageFromText(text) {
   addMessage(text, "user");
   showTyping();
 
-  fetch("https://n8n-besedev.onrender.com/webhook/0cd00d20-988c-4dfd-a635-4de078694d46/chat", {
+  fetch("TON_WEBHOOK_URL", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ message: text })
@@ -1569,9 +1569,7 @@ function addMessage(text, sender) {
   msgContainer.className = "message " + sender;
 
   const avatar = document.createElement("img");
-  avatar.src = sender === "bot"
-    ? "assets/bot.png"
-    : "assets/user.png";
+  avatar.src = sender === "bot" ? "assets/bot.png" : "assets/user.png";
   avatar.className = "msg-avatar";
 
   const bubble = document.createElement("div");
@@ -1606,7 +1604,6 @@ function scrollToBottom() {
   const container = document.getElementById("messages");
   container.scrollTop = container.scrollHeight;
 }
-});
 		</script>
     </body>
 </html>
