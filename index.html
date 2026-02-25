@@ -1449,7 +1449,7 @@ $(document).ready(function() {
   });
 </script>
         <!-- <script src="//code.tidio.co/ed7jfpctlqxwj3x0ooewsky8wwzupvba.js" async> </script> -->
-        <link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
+        <!-- <link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
 
 <script type="module">
 	import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
@@ -1488,6 +1488,38 @@ $(document).ready(function() {
 
 		showWelcomeScreen: true
 	});
-</script>
+</script> -->
+		<div class="chat-wrapper">
+  <div class="chat-header">
+    <img src="https://i.imgur.com/7k12EPD.png" class="avatar">
+    <div>
+      <h4>Besedev Assistant</h4>
+      <span>En ligne</span>
+    </div>
+  </div>
+
+  <div class="chat-messages" id="messages">
+    <div class="message bot">
+      <img src="https://i.imgur.com/7k12EPD.png" class="msg-avatar">
+      <div class="bubble">
+        Bonjour 👋<br>
+        Je suis l'assistant Besedev. Comment puis-je vous aider ?
+      </div>
+    </div>
+
+    <div class="faq-container">
+      <button onclick="sendFAQ(this)">💼 Quels services proposez-vous ?</button>
+      <button onclick="sendFAQ(this)">💰 Combien coûte un site web ?</button>
+      <button onclick="sendFAQ(this)">⏳ Quel est le délai de réalisation ?</button>
+      <button onclick="sendFAQ(this)">📞 Comment vous contacter ?</button>
+    </div>
+  </div>
+
+  <div class="chat-input">
+    <input type="text" id="userInput" placeholder="Écrivez votre message..." />
+    <button onclick="sendMessage()">Envoyer</button>
+  </div>
+</div>
+		<script src="chat-widget.js"></script>
     </body>
 </html>
