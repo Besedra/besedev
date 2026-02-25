@@ -3005,5 +3005,21 @@ html, body {
   --chat--border-radius: 12px;
   --chat--font-family: 'Poppins', sans-serif;
 }
+.chat-window-toggle {
+  background-color: #0d6efd !important;
+  border: none !important;
+  box-shadow: 0 4px 15px rgba(13, 110, 253, 0.4) !important;
+  transition: all 0.3s ease;
+}
 
+/* Hover */
+.chat-window-toggle:hover {
+  background-color: #0b5ed7 !important;
+  transform: scale(1.05);
+}
+
+/* Icône à l'intérieur */
+.chat-window-toggle svg {
+  color: white !important;
+}
 
