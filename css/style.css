@@ -2996,6 +2996,14 @@ html, body {
   }
 }
 
-
+  /* chat interface */
+:root {
+  --chat--color-primary: #0d6efd;
+  --chat--color-primary-shade-50: #0b5ed7;
+  --chat--color-primary-shade-100: #0a58ca;
+  --chat--color-secondary: #f8f9fa;
+  --chat--border-radius: 12px;
+  --chat--font-family: 'Poppins', sans-serif;
+}
 
 
