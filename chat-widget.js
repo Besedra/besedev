@@ -1,4 +1,5 @@
-async function sendMessage() {
+document.addEventListener("DOMContentLoaded", function () {
+  async function sendMessage() {
   const input = document.getElementById("userInput");
   const message = input.value.trim();
   if (!message) return;
@@ -28,7 +29,7 @@ function sendMessageFromText(text) {
   addMessage(text, "user");
   showTyping();
 
-  fetch("TON_WEBHOOK_URL", {
+  fetch("https://n8n-besedev.onrender.com/webhook/0cd00d20-988c-4dfd-a635-4de078694d46/chat", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ message: text })
@@ -45,9 +46,7 @@ function addMessage(text, sender) {
   msgContainer.className = "message " + sender;
 
   const avatar = document.createElement("img");
-  avatar.src = sender === "bot"
-    ? "assets/bot.png"
-    : "assets/user.png";
+  avatar.src = sender === "bot" ? "assets/bot.png" : "assets/user.png";
   avatar.className = "msg-avatar";
 
   const bubble = document.createElement("div");
