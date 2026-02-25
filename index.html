@@ -1490,6 +1490,7 @@ $(document).ready(function() {
 	});
 </script> -->
 		<!-- CHAT WIDGET SIMPLE -->
+<!-- CHAT WIDGET -->
 <div class="chat-wrapper">
   <div class="chat-header">
     <img src="assets/bot.png" class="avatar">
@@ -1500,24 +1501,25 @@ $(document).ready(function() {
     <div class="message bot">
       <img src="assets/bot.png" class="msg-avatar">
       <div class="bubble">
-        Bonjour 👋<br>
-        Je suis l'assistant Besedev. Comment puis-je vous aider ?
+        Bonjour 👋 Je suis l'assistant Besedev. Comment puis-je vous aider ?
       </div>
     </div>
 
     <div class="faq-container">
-      <button onclick="sendFAQ(this)">💼 Quels services proposez-vous ?</button>
-      <button onclick="sendFAQ(this)">💰 Combien coûte un site web ?</button>
-      <button onclick="sendFAQ(this)">⏳ Quel est le délai de réalisation ?</button>
-      <button onclick="sendFAQ(this)">📞 Comment vous contacter ?</button>
+      <button data-faq="Quels services proposez-vous ?">💼 Services</button>
+      <button data-faq="Combien coûte un site web ?">💰 Prix</button>
+      <button data-faq="Quel est le délai de réalisation ?">⏳ Délais</button>
+      <button data-faq="Comment vous contacter ?">📞 Contact</button>
     </div>
   </div>
 
   <div class="chat-input">
     <input type="text" id="userInput" placeholder="Écrivez votre message..." />
-    <button onclick="sendMessage()">Envoyer</button>
+    <button id="sendBtn">Envoyer</button>
   </div>
 </div>
+
+<script src="chat-widget.js"></script>
 
 <script src="chat-widget.js"></script>
     </body>
