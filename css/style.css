@@ -3004,6 +3004,8 @@ html, body {
   --chat--color-secondary: #f8f9fa;
   --chat--border-radius: 12px;
   --chat--font-family: 'Poppins', sans-serif;
+   --chat--window--right: 20px !important;
+  --chat--window--bottom: 90px !important;
 }
 .chat-window-wrapper .chat-window-toggle {
   background-color: #0d6efd !important;
@@ -3024,27 +3026,9 @@ html, body {
 }
 
   /* Position du bouton flottant */
-.chat-window-wrapper {
-    bottom: var(--chat--window--bottom);
-    left: var(--chat--window--right);
-    z-index: var(--chat--window--z-index);
-    max-width: calc(100% - var(--chat--window--right,var(--chat--spacing))*2);
-    max-height: calc(100% - var(--chat--window--bottom,var(--chat--spacing))*2);
-    flex-direction: column;
-    display: flex;
-    position: fixed
-}
 
-  .chat-suggested-question {
-  background: #f1f5ff !important;
-  border: 1px solid #0d6efd !important;
-  border-radius: 20px !important;
-  padding: 8px 14px !important;
-  transition: all 0.3s ease;
-}
-
-.chat-suggested-question:hover {
-  background: #0d6efd !important;
-  color: white !important;
-  transform: translateY(-2px);
+.chat-window-toggle {
+  position: fixed !important;
+  right: 20px !important;
+  bottom: 20px !important;
 }
