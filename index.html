@@ -1491,32 +1491,44 @@ $(document).ready(function() {
 </script> -->
 		<!-- CHAT WIDGET SIMPLE -->
 <!-- CHAT WIDGET -->
-<div class="chat-wrapper">
-  <div class="chat-header">
-    <img src="assets/bot.png" class="avatar" alt="Bot">
-    <h4>Besedev Assistant</h4>
+<!-- CHAT WIDGET FLOTTANT -->
+<div id="chat-widget">
+
+  <!-- Bouton flottant -->
+  <div id="chat-toggle">
+    💬
   </div>
 
-  <div class="chat-messages" id="messages">
-    <div class="message bot">
-      <img src="assets/bot.png" class="msg-avatar" alt="Bot">
-      <div class="bubble">
-        Bonjour 👋 Je suis l'assistant Besedev. Comment puis-je vous aider ?
+  <!-- Fenêtre de chat (minimisée par défaut) -->
+  <div id="chat-window">
+    <div class="chat-header">
+      <img src="assets/bot.png" class="avatar" alt="Bot">
+      <h4>Besedev Assistant</h4>
+      <span id="chat-close">&times;</span>
+    </div>
+
+    <div class="chat-messages" id="messages">
+      <div class="message bot">
+        <img src="assets/bot.png" class="msg-avatar" alt="Bot">
+        <div class="bubble">
+          Bonjour 👋 Je suis l'assistant Besedev. Comment puis-je vous aider ?
+        </div>
+      </div>
+
+      <div class="faq-container">
+        <button data-faq="Quels services proposez-vous ?">💼 Services</button>
+        <button data-faq="Combien coûte un site web ?">💰 Prix</button>
+        <button data-faq="Quel est le délai de réalisation ?">⏳ Délais</button>
+        <button data-faq="Comment vous contacter ?">📞 Contact</button>
       </div>
     </div>
 
-    <div class="faq-container">
-      <button data-faq="Quels services proposez-vous ?">💼 Services</button>
-      <button data-faq="Combien coûte un site web ?">💰 Prix</button>
-      <button data-faq="Quel est le délai de réalisation ?">⏳ Délais</button>
-      <button data-faq="Comment vous contacter ?">📞 Contact</button>
+    <div class="chat-input">
+      <input type="text" id="userInput" placeholder="Écrivez votre message..." />
+      <button id="sendBtn">Envoyer</button>
     </div>
   </div>
 
-  <div class="chat-input">
-    <input type="text" id="userInput" placeholder="Écrivez votre message..." />
-    <button id="sendBtn">Envoyer</button>
-  </div>
 </div>
 
 <script src="chat-widget.js"></script>
