@@ -2999,23 +2999,48 @@ html, body {
   
 
 /* chat interface */
-.chat-wrapper {
-  width: 300px;
+/* Widget flottant */
+#chat-widget {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
+  font-family: Arial, sans-serif;
+}
+
+/* Bouton flottant */
+#chat-toggle {
+  width: 50px;
+  height: 50px;
+  background: #0d6efd;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 24px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* Fenêtre de chat */
+#chat-window {
+  width: 320px;
   max-height: 500px;
-  background: #ffffff;
+  background: #fff;
   border: 1px solid #ddd;
   border-radius: 12px;
   display: flex;
   flex-direction: column;
-  font-family: Arial, sans-serif;
-  position: fixed;
-  bottom: 20px;
-  left: 20px;
-  box-shadow: 0 5px 20px rgba(0,0,0,0.15);
-  z-index: 9999; /* toujours au-dessus */
+  position: absolute;
+  bottom: 60px;
+  right: 0;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.2);
   overflow: hidden;
+  display: none; /* cachée par défaut */
 }
 
+/* Header chat */
 .chat-header {
   background: #0d6efd;
   color: white;
@@ -3023,8 +3048,7 @@ html, body {
   display: flex;
   align-items: center;
   gap: 10px;
-  border-top-left-radius: 12px;
-  border-top-right-radius: 12px;
+  justify-content: space-between;
 }
 
 .chat-header .avatar {
@@ -3033,6 +3057,12 @@ html, body {
   border-radius: 50%;
 }
 
+#chat-close {
+  cursor: pointer;
+  font-size: 20px;
+}
+
+/* Messages */
 .chat-messages {
   flex: 1;
   padding: 10px;
@@ -3045,8 +3075,8 @@ html, body {
 
 .message {
   display: flex;
-  align-items: flex-start;
   gap: 6px;
+  align-items: flex-start;
   max-width: 100%;
 }
 
@@ -3075,6 +3105,7 @@ html, body {
   color: white;
 }
 
+/* Input */
 .chat-input {
   display: flex;
   padding: 6px;
@@ -3106,6 +3137,7 @@ html, body {
   background: #084298;
 }
 
+/* FAQ */
 .faq-container {
   display: flex;
   flex-wrap: wrap;
@@ -3121,25 +3153,9 @@ html, body {
   padding: 4px 10px;
   font-size: 12px;
   cursor: pointer;
-  transition: all 0.2s;
 }
 
 .faq-container button:hover {
   background: #0d6efd;
   color: #fff;
-}
-
-/* Avatar dans la FAQ optionnelle */
-.faq-container button::before {
-  margin-right: 4px;
-}
-
-/* Scrollbar personnalisée */
-.chat-messages::-webkit-scrollbar {
-  width: 6px;
-}
-
-.chat-messages::-webkit-scrollbar-thumb {
-  background: rgba(0,0,0,0.2);
-  border-radius: 3px;
 }
