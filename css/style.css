@@ -2997,10 +2997,11 @@ html, body {
 }
 
   
-  /* chat interface */
+
+/* chat interface */
 .chat-wrapper {
-  width: 320px;
-  height: 450px;
+  width: 300px;
+  max-height: 500px;
   background: #ffffff;
   border: 1px solid #ddd;
   border-radius: 12px;
@@ -3009,8 +3010,10 @@ html, body {
   font-family: Arial, sans-serif;
   position: fixed;
   bottom: 20px;
-  right: 20px;
-  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+  left: 20px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+  z-index: 9999; /* toujours au-dessus */
+  overflow: hidden;
 }
 
 .chat-header {
@@ -3025,8 +3028,8 @@ html, body {
 }
 
 .chat-header .avatar {
-  width: 32px;
-  height: 32px;
+  width: 28px;
+  height: 28px;
   border-radius: 50%;
 }
 
@@ -3035,38 +3038,48 @@ html, body {
   padding: 10px;
   overflow-y: auto;
   background: #f7f7f7;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
 }
 
 .message {
   display: flex;
-  gap: 6px;
-  margin-bottom: 8px;
   align-items: flex-start;
+  gap: 6px;
+  max-width: 100%;
 }
 
 .msg-avatar {
-  width: 24px;
-  height: 24px;
+  width: 20px;
+  height: 20px;
   border-radius: 50%;
 }
 
 .bubble {
   background: #e9f2ff;
-  padding: 8px 12px;
+  padding: 6px 10px;
   border-radius: 12px;
+  font-size: 14px;
+  line-height: 1.3;
   max-width: 70%;
+  word-wrap: break-word;
+}
+
+.message.user {
+  justify-content: flex-end;
 }
 
 .message.user .bubble {
   background: #0d6efd;
   color: white;
-  align-self: flex-end;
 }
 
 .chat-input {
   display: flex;
-  padding: 8px;
+  padding: 6px;
   border-top: 1px solid #ddd;
+  background: #fff;
 }
 
 .chat-input input {
@@ -3075,6 +3088,7 @@ html, body {
   border-radius: 12px;
   border: 1px solid #ccc;
   outline: none;
+  font-size: 14px;
 }
 
 .chat-input button {
@@ -3085,26 +3099,47 @@ html, body {
   color: white;
   border-radius: 12px;
   cursor: pointer;
+  transition: background 0.2s;
+}
+
+.chat-input button:hover {
+  background: #084298;
 }
 
 .faq-container {
   display: flex;
   flex-wrap: wrap;
   gap: 6px;
-  margin-top: 8px;
+  margin-top: 6px;
 }
 
 .faq-container button {
   border: 1px solid #0d6efd;
-  background: white;
+  background: #fff;
   color: #0d6efd;
   border-radius: 12px;
   padding: 4px 10px;
   font-size: 12px;
   cursor: pointer;
+  transition: all 0.2s;
 }
 
 .faq-container button:hover {
   background: #0d6efd;
-  color: white;
+  color: #fff;
+}
+
+/* Avatar dans la FAQ optionnelle */
+.faq-container button::before {
+  margin-right: 4px;
+}
+
+/* Scrollbar personnalisée */
+.chat-messages::-webkit-scrollbar {
+  width: 6px;
+}
+
+.chat-messages::-webkit-scrollbar-thumb {
+  background: rgba(0,0,0,0.2);
+  border-radius: 3px;
 }
