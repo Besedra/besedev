@@ -1455,6 +1455,29 @@ $(document).ready(function() {
 
 	createChat({
 		webhookUrl: 'https://n8n-besedev.onrender.com/webhook/0cd00d20-988c-4dfd-a635-4de078694d46/chat'
+		initialMessages: [
+			"Bonjour 👋",
+			"Je suis l'assistant virtuel de Besedev. Comment puis-je vous aider aujourd’hui ?"
+		],
+
+		i18n: {
+			en: {
+				title: "Chat with Besedev",
+				subtitle: "Ask me anything about our services",
+				footer: "",
+				getStarted: "New Conversation",
+				inputPlaceholder: "Type your message..."
+			},
+			fr: {
+				title: "Discuter avec Besedev",
+				subtitle: "Posez votre question",
+				footer: "",
+				getStarted: "Nouvelle discussion",
+				inputPlaceholder: "Écrivez votre message..."
+			}
+		},
+
+		showWelcomeScreen: true
 	});
 </script>
     </body>
