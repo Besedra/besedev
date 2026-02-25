@@ -3024,7 +3024,7 @@ html, body {
 }
 
   /* Position du bouton flottant */
-.chat-window-wrapper .chat-window-toggle {
+.chat-window-wrapper {
   position: fixed !important;
   right: 20px !important;
   left: auto !important;
@@ -3033,7 +3033,7 @@ html, body {
 }
 
 /* Position de la fenêtre chat */
-.chat-window-wrapper .chat-window {
+.chat-window-wrapper {
   right: 20px !important;
   left: auto !important;
   bottom: 90px !important;
