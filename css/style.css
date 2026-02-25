@@ -3034,3 +3034,17 @@ html, body {
     display: flex;
     position: fixed
 }
+
+  .chat-suggested-question {
+  background: #f1f5ff !important;
+  border: 1px solid #0d6efd !important;
+  border-radius: 20px !important;
+  padding: 8px 14px !important;
+  transition: all 0.3s ease;
+}
+
+.chat-suggested-question:hover {
+  background: #0d6efd !important;
+  color: white !important;
+  transform: translateY(-2px);
+}
