@@ -1665,12 +1665,23 @@ $(document).ready(function() {
 
   <!-- Fenêtre de chat (minimisée par défaut) -->
   <div id="chat-window">
-    <div class="chat-header">
+    <!-- <div class="chat-header">
       <img src="assets/bot.png" class="avatar" alt="Bot">
       <h4>Besedev Assistant</h4>
       <span id="chat-close">&times;</span>
+    </div> -->
+	<div class="chat-header">
+    <img src="assets/bot.png" class="avatar" alt="Bot">
+    <div class="header-info">
+      <h4>Besedev Assistant</h4>
+      <div class="status">
+        <span class="status-dot"></span>
+        <span class="status-text">En ligne</span>
+      </div>
     </div>
-
+    <span id="chat-close">&times;</span>
+  </div>
+	  
     <div class="chat-messages" id="messages">
       <div class="message bot">
         <img src="assets/bot.png" class="msg-avatar" alt="Bot">
