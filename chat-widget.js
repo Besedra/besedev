@@ -93,4 +93,20 @@ document.addEventListener("DOMContentLoaded", function () {
     const typing = document.getElementById("typing");
     if (typing) typing.remove();
   }
+
+  function addMessage(text, sender) {
+  const container = document.getElementById("messages");
+  const msg = document.createElement("div");
+  msg.className = `message ${sender}`;
+  
+  // Supprimer les ** pour éviter le Markdown brut
+  const cleanText = text.replace(/\*\*(.*?)\*\*/g, "$1");
+
+  msg.innerHTML = `
+    <img src="assets/${sender}.png" class="msg-avatar" alt="${sender}">
+    <div class="bubble">${cleanText}</div>
+  `;
+  container.appendChild(msg);
+  container.scrollTop = container.scrollHeight;
+}
 });
