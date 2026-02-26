@@ -3,7 +3,9 @@ document.addEventListener("DOMContentLoaded", function () {
   const chatWindow = document.getElementById("chat-window");
   const chatClose = document.getElementById("chat-close");
   const sendBtn = document.getElementById("sendBtn");
+  const input = document.getElementById("userInput");
 
+  // Ouvrir/fermer le chat
   chatToggle.addEventListener("click", () => {
     chatWindow.style.display = chatWindow.style.display === "flex" ? "none" : "flex";
   });
@@ -12,18 +14,31 @@ document.addEventListener("DOMContentLoaded", function () {
     chatWindow.style.display = "none";
   });
 
-  sendBtn.addEventListener("click", sendMessage);
-  document.getElementById("userInput").addEventListener("keypress", function(e) {
-    if (e.key === "Enter") sendMessage();
+  // Envoi via bouton
+  sendBtn.addEventListener("click", () => sendMessage());
+
+  // Envoi via Enter
+  input.addEventListener("keypress", function(e) {
+    if (e.key === "Enter") {
+      e.preventDefault(); // empêche le comportement par défaut
+      sendMessage();
+    }
   });
 
+  // Boutons FAQ
   document.querySelectorAll(".faq-container button").forEach(btn => {
-    btn.addEventListener("click", () => sendMessage(btn.dataset.faq));
+    btn.addEventListener("click", (e) => {
+      e.preventDefault(); // empêche l'event par défaut
+      sendMessage(btn.dataset.faq);
+    });
   });
 
+  // Fonction principale d'envoi
   async function sendMessage(text) {
-    const input = document.getElementById("userInput");
-    const message = text || input.value.trim();
+    // Ignore si text est un Event (problème mobile)
+    if (text instanceof Event) text = null;
+
+    const message = (text || input.value.trim());
     if (!message) return;
 
     addMessage(message, "user");
@@ -34,7 +49,7 @@ document.addEventListener("DOMContentLoaded", function () {
       const response = await fetch("https://n8n-besedev.onrender.com/webhook/chat", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ message})
+        body: JSON.stringify({ message })
       });
       const data = await response.json();
       removeTyping();
@@ -46,6 +61,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
+  // Ajouter un message à l'écran
   function addMessage(text, sender) {
     const container = document.getElementById("messages");
     const msg = document.createElement("div");
@@ -58,6 +74,7 @@ document.addEventListener("DOMContentLoaded", function () {
     container.scrollTop = container.scrollHeight;
   }
 
+  // Afficher “en train d'écrire...”
   function showTyping() {
     const container = document.getElementById("messages");
     const typing = document.createElement("div");
@@ -71,6 +88,7 @@ document.addEventListener("DOMContentLoaded", function () {
     container.scrollTop = container.scrollHeight;
   }
 
+  // Supprimer le “typing”
   function removeTyping() {
     const typing = document.getElementById("typing");
     if (typing) typing.remove();
