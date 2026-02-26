@@ -127,7 +127,7 @@ document.addEventListener("DOMContentLoaded", function () {
     showTyping();
 
     try {
-      const response = await fetch("https://n8n-besedev.onrender.com/webhook/chat", {
+      const response = await fetch("https://n8n-besedev.onrender.com/webhook-test/chat", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ message })
