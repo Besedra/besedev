@@ -56,7 +56,7 @@ document.addEventListener("DOMContentLoaded", function () {
       addMessage(data.reply || "Désolé, je n'ai pas pu obtenir de réponse 😅", "bot");
     } catch (err) {
       removeTyping();
-      addMessage("Erreur serveur, veuillez réessayer plus tard.", "bot");
+      addMessage("Le chatbot se réveille... veuillez patienter quelques minutes.");
       console.error(err);
     }
   }
